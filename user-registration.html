@@ -8,6 +8,7 @@
 <title>Aide et Action</title>
 <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 <link href="css/lib/bootstrap.min.css" type="text/css" rel="stylesheet">
+<link href="css/lib/bootstrap-datepicker.css" type="text/css" rel="stylesheet">
 <link href="css/layout.css" type="text/css" rel="stylesheet">
 <link href="css/responsive.css" type="text/css" rel="stylesheet">
 </head>
@@ -19,14 +20,7 @@
         <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
         <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="Aide et Action"></a> </div>
       <ul class="nav navbar-nav navbar-right">
-        <li>
-          <form class="navbar-form full-width">
-            <div class="form-group">
-              <input type="text" placeholder="Enter keyword" class="form-control">
-              <button class="btn btn-search" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-            </div>
-          </form>
-        </li>
+        <li><a href="javascript:;">Search</a></li>
         <li class="dropdown navbar-user"> <a data-toggle="dropdown" class="dropdown-toggle" href="javascript:;"> <img alt="" src="images/user.jpg"> <span class="hidden-xs">Suresh Kumar</span> <b class="caret"></b> </a>
           <ul class="dropdown-menu animated fadeInLeft">
             <li class="arrow"></li>
@@ -41,114 +35,212 @@
 </header>
 <div class="wrapper">
   <div class="container inner-wrap">
-    <h3> Details of Seasonal Migrant Family Aide et Action, Bhubaneswar </h3>
-    <form class="form-entry">
-      <fieldset>
-        <legend>Work Site </legend>
-        <div class="row">
-          <div class="col-xs-6 col-lg-4">
-            <div class="form-group">
-              <label for="ws-name">Name</label>
-              <input type="text" id="ws-name" name="ws-name" class="form-control">
+    <h5 class="page-header">Registration</h5>
+    <div class="well well-lg">
+      <form>
+        <fieldset>
+          <h5 class="sub-header"><span>Head of the Household</span></h5>
+          <div class="clearfix">
+            <div class="row">
+              <div class="col-xs-6 col-md-4">
+                <div class="form-group">
+                  <label for="fullname">Name</label>
+                  <input type="text" id="fullname" name="ws-name" class="form-control">
+                </div>
+              </div>
+              <div class="col-xs-6 col-md-4">
+                <div class="form-group">
+                  <label for="age">Age</label>
+                  <input type="text" id="age" name="ws-name" class="form-control">
+                </div>
+              </div>
+              <div class="col-xs-6 col-md-4">
+                <div class="form-group">
+                  <label>Gender</label>
+                  <ul class="label-option">
+                    <li>
+                      <label>
+                        <input type="radio" name="gender" class="radio" checked>
+                        <span class="lbl">Male</span> </label>
+                    </li>
+                    <li>
+                      <label>
+                        <input type="radio" name="gender" class="radio">
+                        <span class="lbl">Female</span> </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <label>Name of the Worksite</label>
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <select name="select" class="form-control">
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                        <option>Option 3</option>
+                      </select>
+                    </div>
+                    <div class="col-sm-4">
+                      <input type="text" name="name" class="form-control" placeholder="Start Date" id="startDate">
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+          <div class="clearfix">
+            <h5 class="inner-head">Permanent Address</h5>
+            <div class="row">
+              <div class="col-xs-6 col-md-4">
+                <div class="form-group">
+                  <label for="age">Village</label>
+                  <input type="text" name="name" class="form-control">
+                </div>
+              </div>
+              <div class="col-xs-6 col-md-4">
+                <div class="form-group">
+                  <label for="age">G.P</label>
+                  <input type="text" name="name" class="form-control">
+                </div>
+              </div>
+              <div class="col-xs-6 col-md-4">
+                <div class="form-group">
+                  <label for="age">Block</label>
+                  <input type="text" name="name" class="form-control">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6 col-md-4">
+                <div class="form-group">
+                  <label for="age">District</label>
+                  <input type="text" name="name" class="form-control">
+                </div>
+              </div>
+              <div class="col-xs-6 col-md-4">
+                <div class="form-group">
+                  <label for="age">State</label>
+                  <input type="text" name="name" class="form-control">
+                </div>
+              </div>
+              <div class="col-xs-6 col-md-4">
+                <div class="form-group">
+                  <label for="age">Phone No.</label>
+                  <input type="text" name="name" class="form-control">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <label>Social Category</label>
+                  <ul class="label-option">
+                    <li>
+                      <label>
+                        <input type="radio" name="category" class="radio" checked>
+                        <span class="lbl">SC</span> </label>
+                    </li>
+                    <li>
+                      <label>
+                        <input type="radio" name="category" class="radio">
+                        <span class="lbl">ST</span> </label>
+                    </li>
+                    <li>
+                      <label>
+                        <input type="radio" name="category" class="radio">
+                        <span class="lbl">OBC</span> </label>
+                    </li>
+                    <li>
+                      <label>
+                        <input type="radio" name="category" class="radio">
+                        <span class="lbl">General</span> </label>
+                    </li>
+                    <li>
+                      <label>
+                        <input type="radio" name="category" class="radio">
+                        <span class="lbl">Minority</span> </label>
+                    </li>
+                    <li>
+                      <label>
+                        <input type="radio" name="category" class="radio">
+                        <span class="lbl">Other</span> </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <h5 class="sub-header"><span>Details of the Family member</span></h5>
+          <div class="clearfix text-right"><button type="submit" class="btn btn-default btn-blue btn-sm"><i class="glyphicon glyphicon-plus"></i> Add</button></div>
+          <div class="row">
+            <div class="col-xs-6 col-md-3">
+              <div class="form-group">
+                <label for="fullname">Name</label>
+                <input type="text" name="ws-name" class="form-control">
+              </div>
+            </div>
+            <div class="col-xs-6 col-md-3">
+              <div class="form-group">
+                <label for="family-age">Age</label>
+                <input type="text" name="ws-name" class="form-control">
+              </div>
+            </div>
+            <div class="col-xs-6 col-md-3">
+              <div class="form-group">
+                <label for="relationship">Relationship</label>
+                <select name="select" class="form-control">
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+                  <option>Option 3</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-xs-6 col-md-3">
+              <div class="form-group">
+                <label>Gender</label>
+                <ul class="label-option">
+                  <li>
+                    <label>
+                      <input type="radio" name="family-gender" class="radio" checked>
+                      <span class="lbl">Male</span> </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input type="radio" name="family-gender" class="radio">
+                      <span class="lbl">Female</span> </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <div class="btn-block margin-T15">
+          <button type="submit" class="btn btn-lg btn-default">Submit</button>
         </div>
-        <div class="row">
-          <div class="col-xs-6 col-lg-4">
-            <div class="form-group">
-              <label for="ws-name">Village</label>
-              <input type="text" id="ws-name" name="ws-name" class="form-control">
-            </div>
-          </div>
-          <div class="col-xs-6 col-lg-4">
-            <div class="form-group">
-              <label for="basic-url">GP</label>
-              <input type="text" class="form-control">
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-6 col-lg-4">
-            <div class="form-group">
-              <label for="ws-name">Block</label>
-              <input type="text" id="ws-name" name="ws-name" class="form-control">
-            </div>
-          </div>
-          <div class="col-xs-6 col-lg-4">
-            <div class="form-group">
-              <label for="basic-url">District</label>
-              <input type="text" class="form-control">
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-6 col-lg-4">
-            <div class="form-group">
-              <label for="ws-name">State</label>
-              <input type="text" id="ws-name" name="ws-name" class="form-control">
-            </div>
-          </div>
-          <div class="col-xs-6 col-lg-4">
-            <div class="form-group">
-              <label for="basic-url">Pin</label>
-              <input type="text" class="form-control">
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-6 col-lg-4">
-            <div class="form-group">
-              <label for="ws-name">Owner's Name</label>
-              <input type="text" id="ws-name" name="ws-name" class="form-control">
-            </div>
-          </div>
-          <div class="col-xs-6 col-lg-4">
-            <div class="form-group">
-              <label for="basic-url">Phone number</label>
-              <input type="text" class="form-control">
-            </div>
-          </div>
-        </div>
-      </fieldset>
-      <fieldset>
-        <legend>Details of the Seasonal Migrant Family </legend>
-        <div class="row">
-          <div class="col-xs-12 col-lg-4">
-            <div class="form-group">
-              <label for="ws-name">Head of the Household</label>
-              <input type="text" id="ws-name" name="ws-name" class="form-control">
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-6 col-lg-4">
-            <div class="form-group">
-              <label for="ws-name">Fathers Name</label>
-              <input type="text" id="ws-name" name="ws-name" class="form-control">
-            </div>
-          </div>
-          <div class="col-xs-6 col-lg-4">
-            <div class="form-group">
-              <legend style="display:inline;font-size:14px;">Gender</legend>
-              <label class="checkbox-inline">
-                <input type="checkbox" id="inlineCheckbox3" value="Male">
-                Male</label>
-              <label class="checkbox-inline">
-                <input type="checkbox" id="inlineCheckbox3" value="Female">
-                Female</label>
-            </div>
-          </div>
-        </div>
-      </fieldset>
-      <br>
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-    </form>
+      </form>
+    </div>
   </div>
 </div>
 <footer>
   <div class="container"> Copyright 2015 All rights reserved. </div>
 </footer>
 <script src="js/lib/jquery.min.js"></script> 
-<script src="js/lib/bootstrap.min.js"></script>
+<script src="js/lib/bootstrap.min.js"></script> 
+<script src="js/lib/bootstrap-datepicker.min.js"></script> 
+<script>
+jQuery(document).ready(function(){
+	$('#startDate').datepicker({
+		keyboardNavigation: false,
+		forceParse: false,
+		autoclose: true,
+		format: "mm/dd/yyyy",
+		startDate: 'd'
+	});
+});
+</script>
 </body>
 </html>
