@@ -1,59 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Aide et Action - Login</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<title>Aide et Action - Login</title>
 
-    <!-- Bootstrap -->
-    <link href="css/lib/bootstrap.min.css" rel="stylesheet">
-    <link href="css/home.css" rel="stylesheet">
+<!-- Bootstrap -->
+<link href="css/lib/bootstrap.min.css" rel="stylesheet">
+<link href="css/layout.css" type="text/css" rel="stylesheet">
+<link href="css/responsive.css" type="text/css" rel="stylesheet">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
 </head>
 <body>
-
-<div class="container">
-
-
-
-        <div class="jumbotron">
-            <img src="images/logo.png" alt="logo" />
-            <div class="container">
-
-                <form class="form-signin">
-
-                    <label for="inputEmail" class="sr-only">Email address</label>
-                    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-                    <label for="inputPassword" class="sr-only">Password</label>
-                    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" value="remember-me"> Remember me
-                        </label>
-                    </div>
-                    <button class="button-login" type="submit">Log in</button>
-                </form>
-
-            </div> <!-- /container -->
-
+<div class="login-bg">
+  <div class="bg-overlay"></div>
+  <div class="container-fluid">
+    <div class="login-panel">
+      <div class="clear text-center"><img src="images/logo.png" alt="Aide et Action"></div>
+      <form>
+        <div class="form-group">
+          <label for="inputEmail">Email address</label>
+          <input type="email" class="form-control" id="inputEmail" placeholder="Email address" autofocus>
         </div>
-
-
-</div> <!-- /container -->
-
-
-
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="js/lib/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
+        <div class="form-group">
+          <label for="inputPassword">Password</label>
+          <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+        </div>
+        <div class="clear">
+        <label>
+          <input type="checkbox" value="remember-me" class="checkbox">
+          <span class="lbl">Remember me</span>
+        </label>
+        </div>
+        <button type="submit" class="btn btn-default">Log in</button>
+      </form>
+    </div>
+  </div>
+</div>
+<script src="js/lib/jquery.min.js"></script> 
 <script src="js/lib/bootstrap.min.js"></script>
 </body>
 </html>
