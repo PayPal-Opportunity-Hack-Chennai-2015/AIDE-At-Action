@@ -10,75 +10,85 @@ import java.util.Set;
  * 
  */
 @Entity
-@Table(name="school")
-@NamedQuery(name="School.findAll", query="SELECT s FROM School s")
+@Table(name = "school")
+@NamedQuery(name = "School.findAll", query = "SELECT s FROM School s")
 public class School implements Serializable {
-	private static final long serialVersionUID = 1L;
+  private static final long serialVersionUID = 1L;
 
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(unique=true, nullable=false)
-	private int id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  @Column(unique = true, nullable = false)
+  private int id;
 
-	@Column(length=45)
-	private String contact;
+  @Column(length = 45)
+  private String contact;
 
-	//bi-directional many-to-one association to AssessmentEducation
-	@OneToMany(mappedBy="schoolBean", fetch=FetchType.EAGER)
-	private Set<AssessmentEducation> assessmentEducations;
+  // bi-directional many-to-one association to AssessmentEducation
+  @OneToMany(mappedBy = "schoolBean", fetch = FetchType.EAGER)
+  private Set<AssessmentEducation> assessmentEducations;
 
-	//bi-directional many-to-one association to Address
-	@ManyToOne
-	@JoinColumn(name="address")
-	private Address addressBean;
+  // bi-directional many-to-one association to Address
+  @ManyToOne
+  @JoinColumn(name = "address")
+  private Address addressBean;
 
-	public School() {
-	}
+  private String type;
 
-	public int getId() {
-		return this.id;
-	}
+  public School() {}
 
-	public void setId(int id) {
-		this.id = id;
-	}
+  public int getId() {
+    return this.id;
+  }
 
-	public String getContact() {
-		return this.contact;
-	}
+  public void setId(int id) {
+    this.id = id;
+  }
 
-	public void setContact(String contact) {
-		this.contact = contact;
-	}
+  public String getContact() {
+    return this.contact;
+  }
 
-	public Set<AssessmentEducation> getAssessmentEducations() {
-		return this.assessmentEducations;
-	}
+  public void setContact(String contact) {
+    this.contact = contact;
+  }
 
-	public void setAssessmentEducations(Set<AssessmentEducation> assessmentEducations) {
-		this.assessmentEducations = assessmentEducations;
-	}
+  public Set<AssessmentEducation> getAssessmentEducations() {
+    return this.assessmentEducations;
+  }
 
-	public AssessmentEducation addAssessmentEducation(AssessmentEducation assessmentEducation) {
-		getAssessmentEducations().add(assessmentEducation);
-		assessmentEducation.setSchoolBean(this);
+  public void setAssessmentEducations(Set<AssessmentEducation> assessmentEducations) {
+    this.assessmentEducations = assessmentEducations;
+  }
 
-		return assessmentEducation;
-	}
+  public AssessmentEducation addAssessmentEducation(AssessmentEducation assessmentEducation) {
+    getAssessmentEducations().add(assessmentEducation);
+    assessmentEducation.setSchoolBean(this);
 
-	public AssessmentEducation removeAssessmentEducation(AssessmentEducation assessmentEducation) {
-		getAssessmentEducations().remove(assessmentEducation);
-		assessmentEducation.setSchoolBean(null);
+    return assessmentEducation;
+  }
 
-		return assessmentEducation;
-	}
+  public AssessmentEducation removeAssessmentEducation(AssessmentEducation assessmentEducation) {
+    getAssessmentEducations().remove(assessmentEducation);
+    assessmentEducation.setSchoolBean(null);
 
-	public Address getAddressBean() {
-		return this.addressBean;
-	}
+    return assessmentEducation;
+  }
 
-	public void setAddressBean(Address addressBean) {
-		this.addressBean = addressBean;
-	}
+  public Address getAddressBean() {
+    return this.addressBean;
+  }
+
+  public void setAddressBean(Address addressBean) {
+    this.addressBean = addressBean;
+  }
+
+  public String getType() {
+    return type;
+  }
+
+  public void setType(String type) {
+    this.type = type;
+  }
+
 
 }

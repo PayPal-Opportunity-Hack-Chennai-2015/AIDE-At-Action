@@ -10,186 +10,197 @@ import java.util.Set;
  * 
  */
 @Entity
-@Table(name="worksite")
-@NamedQuery(name="Worksite.findAll", query="SELECT w FROM Worksite w")
+@Table(name = "worksite")
+@NamedQuery(name = "Worksite.findAll", query = "SELECT w FROM Worksite w")
 public class Worksite implements Serializable {
-	private static final long serialVersionUID = 1L;
+  private static final long serialVersionUID = 1L;
 
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(unique=true, nullable=false)
-	private int id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  @Column(unique = true, nullable = false)
+  private int id;
 
-	@Column(length=45)
-	private String contact;
+  @Column(length = 45)
+  private String contact;
 
-	@Column(length=45)
-	private String name;
+  @Column(length = 45)
+  private String owner;
 
-	@Column(length=45)
-	private String type;
+  @Column(length = 45)
+  private String name;
 
-	@Column(length=45)
-	private String worksitecol;
+  @Column(length = 45)
+  private String type;
 
-	//bi-directional many-to-one association to Assessment
-	@OneToMany(mappedBy="worksiteBean", fetch=FetchType.EAGER)
-	private Set<Assessment> assessments;
+  @Column(length = 45)
+  private String worksitecol;
 
-	//bi-directional many-to-one association to Family
-	@OneToMany(mappedBy="worksiteBean", fetch=FetchType.EAGER)
-	private Set<Family> families;
+  // bi-directional many-to-one association to Assessment
+  @OneToMany(mappedBy = "worksiteBean", fetch = FetchType.EAGER)
+  private Set<Assessment> assessments;
 
-	//bi-directional many-to-one association to Address
-	@ManyToOne
-	@JoinColumn(name="address")
-	private Address addressBean;
+  // bi-directional many-to-one association to Family
+  @OneToMany(mappedBy = "worksiteBean", fetch = FetchType.EAGER)
+  private Set<Family> families;
 
-	//bi-directional many-to-one association to FamilyTransfer
-	@OneToMany(mappedBy="worksite1", fetch=FetchType.EAGER)
-	private Set<FamilyTransfer> familyTransfers1;
+  // bi-directional many-to-one association to Address
+  @ManyToOne
+  @JoinColumn(name = "address")
+  private Address addressBean;
 
-	//bi-directional many-to-one association to FamilyTransfer
-	@OneToMany(mappedBy="worksite2", fetch=FetchType.EAGER)
-	private Set<FamilyTransfer> familyTransfers2;
+  // bi-directional many-to-one association to FamilyTransfer
+  @OneToMany(mappedBy = "worksite1", fetch = FetchType.EAGER)
+  private Set<FamilyTransfer> familyTransfers1;
 
-	public Worksite() {
-	}
+  // bi-directional many-to-one association to FamilyTransfer
+  @OneToMany(mappedBy = "worksite2", fetch = FetchType.EAGER)
+  private Set<FamilyTransfer> familyTransfers2;
 
-	public int getId() {
-		return this.id;
-	}
+  public Worksite() {}
 
-	public void setId(int id) {
-		this.id = id;
-	}
+  public int getId() {
+    return this.id;
+  }
 
-	public String getContact() {
-		return this.contact;
-	}
+  public void setId(int id) {
+    this.id = id;
+  }
 
-	public void setContact(String contact) {
-		this.contact = contact;
-	}
+  public String getContact() {
+    return this.contact;
+  }
 
-	public String getName() {
-		return this.name;
-	}
+  public void setContact(String contact) {
+    this.contact = contact;
+  }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+  public String getName() {
+    return this.name;
+  }
 
-	public String getType() {
-		return this.type;
-	}
+  public void setName(String name) {
+    this.name = name;
+  }
 
-	public void setType(String type) {
-		this.type = type;
-	}
+  public String getType() {
+    return this.type;
+  }
 
-	public String getWorksitecol() {
-		return this.worksitecol;
-	}
+  public void setType(String type) {
+    this.type = type;
+  }
 
-	public void setWorksitecol(String worksitecol) {
-		this.worksitecol = worksitecol;
-	}
+  public String getWorksitecol() {
+    return this.worksitecol;
+  }
 
-	public Set<Assessment> getAssessments() {
-		return this.assessments;
-	}
+  public void setWorksitecol(String worksitecol) {
+    this.worksitecol = worksitecol;
+  }
 
-	public void setAssessments(Set<Assessment> assessments) {
-		this.assessments = assessments;
-	}
+  public Set<Assessment> getAssessments() {
+    return this.assessments;
+  }
 
-	public Assessment addAssessment(Assessment assessment) {
-		getAssessments().add(assessment);
-		assessment.setWorksiteBean(this);
+  public void setAssessments(Set<Assessment> assessments) {
+    this.assessments = assessments;
+  }
 
-		return assessment;
-	}
+  public Assessment addAssessment(Assessment assessment) {
+    getAssessments().add(assessment);
+    assessment.setWorksiteBean(this);
 
-	public Assessment removeAssessment(Assessment assessment) {
-		getAssessments().remove(assessment);
-		assessment.setWorksiteBean(null);
+    return assessment;
+  }
 
-		return assessment;
-	}
+  public Assessment removeAssessment(Assessment assessment) {
+    getAssessments().remove(assessment);
+    assessment.setWorksiteBean(null);
 
-	public Set<Family> getFamilies() {
-		return this.families;
-	}
+    return assessment;
+  }
 
-	public void setFamilies(Set<Family> families) {
-		this.families = families;
-	}
+  public Set<Family> getFamilies() {
+    return this.families;
+  }
 
-	public Family addFamily(Family family) {
-		getFamilies().add(family);
-		family.setWorksiteBean(this);
+  public void setFamilies(Set<Family> families) {
+    this.families = families;
+  }
 
-		return family;
-	}
+  public Family addFamily(Family family) {
+    getFamilies().add(family);
+    family.setWorksiteBean(this);
 
-	public Family removeFamily(Family family) {
-		getFamilies().remove(family);
-		family.setWorksiteBean(null);
+    return family;
+  }
 
-		return family;
-	}
+  public Family removeFamily(Family family) {
+    getFamilies().remove(family);
+    family.setWorksiteBean(null);
 
-	public Address getAddressBean() {
-		return this.addressBean;
-	}
+    return family;
+  }
 
-	public void setAddressBean(Address addressBean) {
-		this.addressBean = addressBean;
-	}
+  public Address getAddressBean() {
+    return this.addressBean;
+  }
 
-	public Set<FamilyTransfer> getFamilyTransfers1() {
-		return this.familyTransfers1;
-	}
+  public void setAddressBean(Address addressBean) {
+    this.addressBean = addressBean;
+  }
 
-	public void setFamilyTransfers1(Set<FamilyTransfer> familyTransfers1) {
-		this.familyTransfers1 = familyTransfers1;
-	}
+  public Set<FamilyTransfer> getFamilyTransfers1() {
+    return this.familyTransfers1;
+  }
 
-	public FamilyTransfer addFamilyTransfers1(FamilyTransfer familyTransfers1) {
-		getFamilyTransfers1().add(familyTransfers1);
-		familyTransfers1.setWorksite1(this);
+  public void setFamilyTransfers1(Set<FamilyTransfer> familyTransfers1) {
+    this.familyTransfers1 = familyTransfers1;
+  }
 
-		return familyTransfers1;
-	}
+  public FamilyTransfer addFamilyTransfers1(FamilyTransfer familyTransfers1) {
+    getFamilyTransfers1().add(familyTransfers1);
+    familyTransfers1.setWorksite1(this);
 
-	public FamilyTransfer removeFamilyTransfers1(FamilyTransfer familyTransfers1) {
-		getFamilyTransfers1().remove(familyTransfers1);
-		familyTransfers1.setWorksite1(null);
+    return familyTransfers1;
+  }
 
-		return familyTransfers1;
-	}
+  public FamilyTransfer removeFamilyTransfers1(FamilyTransfer familyTransfers1) {
+    getFamilyTransfers1().remove(familyTransfers1);
+    familyTransfers1.setWorksite1(null);
 
-	public Set<FamilyTransfer> getFamilyTransfers2() {
-		return this.familyTransfers2;
-	}
+    return familyTransfers1;
+  }
 
-	public void setFamilyTransfers2(Set<FamilyTransfer> familyTransfers2) {
-		this.familyTransfers2 = familyTransfers2;
-	}
+  public Set<FamilyTransfer> getFamilyTransfers2() {
+    return this.familyTransfers2;
+  }
 
-	public FamilyTransfer addFamilyTransfers2(FamilyTransfer familyTransfers2) {
-		getFamilyTransfers2().add(familyTransfers2);
-		familyTransfers2.setWorksite2(this);
+  public void setFamilyTransfers2(Set<FamilyTransfer> familyTransfers2) {
+    this.familyTransfers2 = familyTransfers2;
+  }
 
-		return familyTransfers2;
-	}
+  public FamilyTransfer addFamilyTransfers2(FamilyTransfer familyTransfers2) {
+    getFamilyTransfers2().add(familyTransfers2);
+    familyTransfers2.setWorksite2(this);
 
-	public FamilyTransfer removeFamilyTransfers2(FamilyTransfer familyTransfers2) {
-		getFamilyTransfers2().remove(familyTransfers2);
-		familyTransfers2.setWorksite2(null);
+    return familyTransfers2;
+  }
 
-		return familyTransfers2;
-	}
+  public FamilyTransfer removeFamilyTransfers2(FamilyTransfer familyTransfers2) {
+    getFamilyTransfers2().remove(familyTransfers2);
+    familyTransfers2.setWorksite2(null);
+
+    return familyTransfers2;
+  }
+
+  public String getOwner() {
+    return owner;
+  }
+
+  public void setOwner(String owner) {
+    this.owner = owner;
+  }
+
 
 }
