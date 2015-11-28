@@ -18,9 +18,9 @@ public class FamilyRegistration {
   
   private List<User> family;
   
-  private Worksite work;
+  private int work;
   
-  private Date startDate;
+  private String startDate;
   
   private String category;
 
@@ -48,19 +48,19 @@ public class FamilyRegistration {
     this.family = family;
   }
 
-  public Worksite getWork() {
+  public int getWork() {
     return work;
   }
 
-  public void setWork(Worksite work) {
+  public void setWork(int work) {
     this.work = work;
   }
 
-  public Date getStartDate() {
+  public String getStartDate() {
     return startDate;
   }
 
-  public void setStartDate(Date startDate) {
+  public void setStartDate(String startDate) {
     this.startDate = startDate;
   }
 
@@ -70,6 +70,12 @@ public class FamilyRegistration {
 
   public void setCategory(String category) {
     this.category = category;
+  }
+
+  @Override
+  public String toString() {
+    return "FamilyRegistration [familyHead=" + familyHead + ", address=" + address + ", family=" + family + ", work="
+        + work + ", startDate=" + startDate + ", category=" + category + "]";
   }
   
   

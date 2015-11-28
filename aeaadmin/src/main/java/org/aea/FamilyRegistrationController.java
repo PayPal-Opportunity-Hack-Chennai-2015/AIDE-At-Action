@@ -28,7 +28,7 @@ public class FamilyRegistrationController {
   @RequestMapping(value = "/register", method= RequestMethod.GET)
   public String loadRegistrations(@RequestParam(value = "id", required = false) String familyID,
       Model model) {
-    
+    System.out.println("Get");
     model.addAttribute("allschool", register.getAllSchool(null));
     model.addAttribute("allwork", register.getAllWorksites());
     model.addAttribute("registration", new FamilyRegistration());
@@ -37,7 +37,9 @@ public class FamilyRegistrationController {
   
   @RequestMapping(value = "/register", method= RequestMethod.POST)
   public String addRegistration(@ModelAttribute FamilyRegistration registration, Model model){
-    register.save(registration);
+    
+    System.out.println(registration);
+    //register.save(registration);
     return "dashboard";
   }
   

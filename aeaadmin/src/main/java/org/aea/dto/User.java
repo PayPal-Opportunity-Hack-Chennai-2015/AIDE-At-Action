@@ -120,6 +120,14 @@ public class User {
   public void setIslactating(int islactating) {
     this.islactating = islactating;
   }
+
+  @Override
+  public String toString() {
+    return "User [name=" + name + ", age=" + age + ", dob=" + dob + ", gender=" + gender + ", relation=" + relation
+        + ", enrolledSchol=" + enrolledSchol + ", standard=" + standard + ", isPregrant=" + isPregrant
+        + ", expectedDelivery=" + expectedDelivery + ", handicaped=" + handicaped + ", islactating=" + islactating
+        + "]";
+  }
   
   
 }
