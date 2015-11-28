@@ -1,0 +1,96 @@
+/*
+ * Base structure
+ */
+
+html,
+body {
+    background: url("../images/login-bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+
+
+}
+body {
+    color: #000;
+    text-align: center;
+
+}
+
+.jumbotron {
+    text-align: center;
+    position: relative;
+    top:250px;
+    right:300px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    width: 70%;
+}
+
+.form-signin {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+    margin-bottom: 10px;
+}
+.form-signin .checkbox {
+    font-weight: normal;
+}
+.form-signin .form-control {
+    position: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+}
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.button-login{
+
+    color: #fff;
+    background-color: #55acee;
+    background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.05));
+    border: 1px solid #3b88c3;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.15);
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+
+    box-shadow: 0 1px 0 #fff;
+    height: 30px;
+}
+
+
+
+
+
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 730px;
+    }
+}
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    /* Remove the padding we set earlier */
+    .container {
+        max-width: 730px;
+    }
+}
