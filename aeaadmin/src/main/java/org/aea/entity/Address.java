@@ -7,7 +7,7 @@ import java.util.Set;
 
 /**
  * The persistent class for the address database table.
- * 
+ *
  */
 @Entity
 @Table(name="address")
@@ -40,6 +40,12 @@ public class Address implements Serializable {
 
 	@Column(length=45)
 	private String zip;
+
+	@Column(length=45)
+	private String block;
+
+	@Column(length=45)
+	private String village;
 
 	//bi-directional many-to-one association to Family
 	@OneToMany(mappedBy="address1", fetch=FetchType.EAGER)
