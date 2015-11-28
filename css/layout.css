@@ -86,7 +86,7 @@ p{font-size:14px; color:#000; line-height:18px;}
 .btn-orange:hover, .btn-orange:focus{background-color:#ec971f !important;}
 .btn-blue{background-color:#337ab7 !important;}
 .btn-blue:hover, .btn-blue:focus{background-color:#408bcb !important;}
-.form-group{margin-bottom:10px; position:relative;}
+.form-group{position:relative;}
 .form-group label{font-size:18px; color:#333; line-height:20px;}
 .form-control{height:36px; padding:6px 15px 5px; font-size:14px; color:#333; border:1px solid #c8dbef; border-radius:5px !important;}
 .form-control:focus{border-color:#fbb017 !important; box-shadow:none;}
