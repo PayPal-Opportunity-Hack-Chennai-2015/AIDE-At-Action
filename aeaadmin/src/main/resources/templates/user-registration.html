@@ -223,6 +223,56 @@
               </div>
             </div>
           </div>
+                    <!-- Wife -->
+          <div class="row">
+            <div class="col-xs-6 col-md-12">
+              <div class="form-group">
+                <ul class="label-option no-margin">
+                  <li class="pull-left control-label">
+                    <label>
+                      <input type="checkbox" name="family-gender" class="checkbox" checked="checked"/>
+                      <span class="lbl">Pregnant</span> </label>
+                  </li>
+                  <li>
+                    <label class="control-label col-sm-6">Experted delivery date</label>
+                    <div class="col-sm-6 no-padding">
+                      <input type="text" name="name" class="form-control" placeholder="Start Date" id="deliveryDate"/>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Son -->
+          <div class="row">
+            <div class="col-xs-6 col-md-12">
+              <div class="form-group">
+                <ul class="label-option no-margin">
+                  <li class="pull-left control-label">
+                    <label>
+                      <input type="checkbox" name="family-gender" class="checkbox" checked="checked"/>
+                      <span class="lbl">Integrated with the education / AWC</span> </label>
+                  </li>
+                  <li class="col-sm-4 no-padding-right">
+                    <label class="control-label col-sm-3">School</label>
+                    <div class="col-sm-8 no-padding">
+                      <select name="select" class="form-control">
+                          <option>School 1</option>
+                          <option>School 2</option>
+                          <option>School 3</option>
+                        </select>
+                    </div>
+                  </li>
+                  <li class="col-sm-4 no-padding">
+                    <label class="control-label col-sm-3">Standard</label>
+                    <div class="col-sm-8 no-padding">
+                      <input type="text" name="name" class="form-control"/>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </fieldset>
         <div class="btn-block margin-T15">
           <button type="submit" class="btn btn-lg btn-default">Submit</button>
@@ -240,6 +290,13 @@
 <script>
 jQuery(document).ready(function(){
 	$('#startDate').datepicker({
+		keyboardNavigation: false,
+		forceParse: false,
+		autoclose: true,
+		format: "mm/dd/yyyy",
+		startDate: 'd'
+	});
+	$('#deliveryDate').datepicker({
 		keyboardNavigation: false,
 		forceParse: false,
 		autoclose: true,
