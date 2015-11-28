@@ -1,0 +1,42 @@
+/* Bootstrap Override and Responsive Styles
+--------------------------------------------- */
+@media (min-width:1110px){
+
+}
+
+@media (min-width:1024px){
+.wrapper{margin-bottom:-40px; min-height:100%;}
+.wrapper:after{content:""; display:block;}
+footer, .wrapper:after{height:40px;}
+}
+
+@media (max-width:1024px){
+
+}
+
+@media (min-width:992px){
+}
+
+@media (max-width:991px){
+
+}
+
+@media (max-width:767px){
+
+}
+
+@media (min-width:568px){
+
+}
+
+@media (max-width:567px){
+
+}
+
+@media (max-width:400px){
+
+}
+
+@media (max-width:360px){
+
+}
