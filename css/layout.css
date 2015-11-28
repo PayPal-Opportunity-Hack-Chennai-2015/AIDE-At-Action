@@ -244,10 +244,10 @@ to {
 section{position:relative;}
 .wrapper{width:100%; float:left; padding-top:75px; position:relative; overflow:hidden;}
 .inner-wrap{padding-top:20px; padding-bottom:20px;}
-.widget.widget-stats{position:relative;}
 .bg-overlay{background-color:rgba(0, 0, 0, 0.2); position:absolute; height:100%; top:0; left:0; right:0; z-index:0;}
 .login-bg{background: url("../images/login-bg.jpg") no-repeat center center; background-size:cover; position:absolute; height:100%; top:0; left:0; right:0;}
 .login-panel{background-color:#fff; width:400px; position:relative; z-index:11; margin:120px auto 30px; padding:25px; border-radius:6px; -webkit-box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.40); -moz-box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.40); box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.40);}
+.widget.widget-stats{position:relative;}
 
 
 /* Footer Styles
