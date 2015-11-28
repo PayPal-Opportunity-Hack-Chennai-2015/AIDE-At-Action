@@ -21,6 +21,8 @@ public class Address {
 
   private String contact;
 
+  private String district;
+
   public String getVillage() {
     return village;
   }
@@ -67,6 +69,20 @@ public class Address {
 
   public void setContact(String contact) {
     this.contact = contact;
+  }
+
+  public String getDistrict() {
+    return district;
+  }
+
+  public void setDistrict(String district) {
+    this.district = district;
+  }
+
+  @Override
+  public String toString() {
+    return "Address [village=" + village + ", gp=" + gp + ", block=" + block + ", state=" + state + ", pin=" + pin
+        + ", contact=" + contact + ", district=" + district + "]";
   }
 
 
