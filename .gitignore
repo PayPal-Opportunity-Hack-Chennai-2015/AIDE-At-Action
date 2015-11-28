@@ -1,3 +1,10 @@
+# Intellij
+.idea/
+*.iml
+*.iws
+*.idea*
+
+# Mac
 .DS_Store
 
 aeaadmin/.classpath
@@ -7,3 +14,6 @@ aeaadmin/.settings/org.eclipse.jdt.core.prefs
 aeaadmin/.settings/org.eclipse.m2e.core.prefs
 aeaadmin/.settings/org.eclipse.wst.common.project.facet.core.xml
 aeaadmin/data/elasticsearch/nodes/0/_state/global-10.st
+# Maven
+log/
+target/
