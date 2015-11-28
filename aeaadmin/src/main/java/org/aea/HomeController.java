@@ -20,7 +20,7 @@ public class HomeController {
       return "greeting";
   }
   
-  @RequestMapping("/ind")
+  @RequestMapping("/home")
   public String index(Model model) {
       return "index";
   }
