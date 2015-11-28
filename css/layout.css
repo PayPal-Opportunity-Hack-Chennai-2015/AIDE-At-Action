@@ -182,6 +182,13 @@ header, footer{clear:both;}
 	-moz-border-radius: 20px;
 	border-radius: 20px
 }
+.navbar-user:before{
+	content:"";
+	position:absolute;
+	border-left:1px solid #c7c7c7;
+	top:15px;
+	height:20px;
+}
 .navbar-user img {
 	float: left;
 	width: 30px;
