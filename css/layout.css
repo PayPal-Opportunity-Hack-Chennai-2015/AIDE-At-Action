@@ -259,3 +259,58 @@ section{position:relative;}
 /* Footer Styles
 --------------------------------------------- */
 footer{background-color:#333; width:100%; height:40px; padding-top:10px; color:#fff; font-size:12px; position:relative; z-index:99;}
+
+
+.widget.widget-stat {
+    text-align: center;
+}
+.widget {
+    background: #fff none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 5px;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+    display: block;
+    margin-bottom: 20px;
+    padding: 20px;
+    position: relative;
+}
+.text-white {
+    color: #fff;
+}
+.bg-primary {
+    background: #2184da none repeat scroll 0 0 !important;
+}
+.bg-success {
+    background: #17b6a4 none repeat scroll 0 0 !important;
+}
+.bg-info {
+    background: #38afd3 none repeat scroll 0 0 !important;
+}
+.bg-warn {
+    background: #83710d none repeat scroll 0 0 !important;
+}
+
+
+.widget-stat-btn {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    z-index: 1000;
+}
+.stat-icon {
+    float: right;
+}
+.widget-stat-right .widget-stat-info {
+    margin-left: 0;
+    margin-right: 70px;
+}
+.widget-stat-right .widget-stat-icon {
+    float: right;
+}
+.widget-stat-icon {
+    color: #fff;
+    float: left;
+    font-size: 25px;
+/*    opacity: 0.5; */
+    width: 50px;
+}
