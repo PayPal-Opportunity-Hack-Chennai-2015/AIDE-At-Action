@@ -186,19 +186,19 @@
             <div class="col-xs-6 col-md-3">
               <div class="form-group">
                 <label for="fullname">Name</label>
-                <input type="text" name="ws-name" class="form-control"/>
+                <input type="text" name="family[0].name" class="form-control"/>
               </div>
             </div>
             <div class="col-xs-6 col-md-3">
               <div class="form-group">
                 <label for="family-age">Age</label>
-                <input type="text" name="ws-name" class="form-control"/>
+                <input type="text" name="family[0].age" class="form-control"/>
               </div>
             </div>
             <div class="col-xs-6 col-md-3">
               <div class="form-group">
                 <label for="relationship">Relationship</label>
-                <select name="select" class="form-control">
+                <select name="family[0].relation" class="form-control">
                   <option>Option 1</option>
                   <option>Option 2</option>
                   <option>Option 3</option>
@@ -211,12 +211,12 @@
                 <ul class="label-option">
                   <li>
                     <label>
-                      <input type="radio" name="family-gender" class="radio" checked="checked"/>
+                      <input type="radio" name="family[0].gender" class="radio" checked="checked" value="0"/>
                       <span class="lbl">Male</span> </label>
                   </li>
                   <li>
                     <label>
-                      <input type="radio" name="family-gender" class="radio"/>
+                      <input type="radio" name="family[0].gender" class="radio" value="1"/>
                       <span class="lbl">Female</span> </label>
                   </li>
                 </ul>
