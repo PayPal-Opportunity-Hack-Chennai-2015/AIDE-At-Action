@@ -11,6 +11,8 @@ public class Worksite {
   private Address address;
   
   private String owner;
+  
+  private int id;
 
   public String getName() {
     return name;
@@ -34,6 +36,14 @@ public class Worksite {
 
   public void setOwner(String owner) {
     this.owner = owner;
+  }
+
+  public void setId(int id) {
+    this.id = id;
+  }
+
+  public int getId() {
+    return id;
   }
   
   

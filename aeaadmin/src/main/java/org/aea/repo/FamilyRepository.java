@@ -10,4 +10,8 @@ public interface FamilyRepository extends JpaRepository<Family, String> {
 	
     @Query("SELECT f FROM Family f")
     List<Family> getFamilyList();
+    
+    public List<Family> findByFamilyId(String familiyId);
+    
+//    public 
 }

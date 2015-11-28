@@ -15,7 +15,7 @@ public class User {
   
   private int age;
   
-  private Date dob;
+  private String dob;
   
   private int gender;
   
@@ -27,7 +27,7 @@ public class User {
   
   private int isPregrant;
   
-  private Date expectedDelivery;
+  private String expectedDelivery;
   
   private int handicaped;
   
@@ -47,14 +47,6 @@ public class User {
 
   public void setAge(int age) {
     this.age = age;
-  }
-
-  public Date getDob() {
-    return dob;
-  }
-
-  public void setDob(Date dob) {
-    this.dob = dob;
   }
 
   public int getGender() {
@@ -97,11 +89,19 @@ public class User {
     this.isPregrant = isPregrant;
   }
 
-  public Date getExpectedDelivery() {
+  public String getDob() {
+    return dob;
+  }
+
+  public void setDob(String dob) {
+    this.dob = dob;
+  }
+
+  public String getExpectedDelivery() {
     return expectedDelivery;
   }
 
-  public void setExpectedDelivery(Date expectedDelivery) {
+  public void setExpectedDelivery(String expectedDelivery) {
     this.expectedDelivery = expectedDelivery;
   }
 
