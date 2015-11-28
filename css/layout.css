@@ -255,6 +255,9 @@ section{position:relative;}
 footer{background-color:#333; width:100%; height:40px; padding-top:10px; color:#fff; font-size:12px; position:relative; z-index:99;}
 
 
+/* Big icon fonts
+--------------------------------------------- */
+
 .widget.widget-stat {
     text-align: center;
 }
@@ -272,13 +275,13 @@ footer{background-color:#333; width:100%; height:40px; padding-top:10px; color:#
     color: #fff;
 }
 .bg-primary {
-    background: #2184da none repeat scroll 0 0 !important;
+    background: #1c72be none repeat scroll 0 0 !important;
 }
 .bg-success {
-    background: #17b6a4 none repeat scroll 0 0 !important;
+    background: #107e71 none repeat scroll 0 0 !important;
 }
 .bg-info {
-    background: #38afd3 none repeat scroll 0 0 !important;
+    background: #1f738d none repeat scroll 0 0 !important;
 }
 .bg-warn {
     background: #83710d none repeat scroll 0 0 !important;
