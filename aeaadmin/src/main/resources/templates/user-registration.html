@@ -1,8 +1,8 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<meta charset="utf-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
 <meta name="description" content="Aide et Action, Aide Action"/>
 <title>Aide et Action</title>
@@ -37,7 +37,7 @@
   <div class="container inner-wrap">
     <h5 class="page-header">Registration</h5>
     <div class="well well-lg">
-      <form>
+      <form method="post">
         <fieldset>
           <h5 class="sub-header"><span>Head of the Household</span></h5>
           <div class="clearfix">
@@ -45,13 +45,13 @@
               <div class="col-xs-6 col-md-4">
                 <div class="form-group">
                   <label for="fullname">Name</label>
-                  <input type="text" id="fullname" name="ws-name" class="form-control"/>
+                  <input type="text" id="fullname" name="familyHead.name" class="form-control"/>
                 </div>
               </div>
               <div class="col-xs-6 col-md-4">
                 <div class="form-group">
                   <label for="age">Age</label>
-                  <input type="text" id="age" name="ws-name" class="form-control"/>
+                  <input type="text" id="age" name="familyHead.age" class="form-control"/>
                 </div>
               </div>
               <div class="col-xs-6 col-md-4">
@@ -60,12 +60,12 @@
                   <ul class="label-option">
                     <li>
                       <label>
-                        <input type="radio" name="gender" class="radio" checked="checked"/>
+                        <input type="radio" name="familyHead.gender" class="radio" checked = "checked" value="0" />
                         <span class="lbl">Male</span> </label>
                     </li>
                     <li>
                       <label>
-                        <input type="radio" name="gender" class="radio"/>
+                        <input type="radio" name="familyHead.gender" class="radio" value="1"/>
                         <span class="lbl">Female</span> </label>
                     </li>
                   </ul>
@@ -76,14 +76,14 @@
                   <label>Name of the Worksite</label>
                   <div class="row">
                     <div class="col-sm-4">
-                      <select name="select" class="form-control">
-                        <option>Option 1</option>
-                        <option>Option 2</option>
-                        <option>Option 3</option>
+                      <select name="work" class="form-control">
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
                       </select>
                     </div>
                     <div class="col-sm-4">
-                      <input type="text" name="name" class="form-control" placeholder="Start Date" id="startDate"/>
+                      <input type="text" name="startDate" class="form-control" placeholder="Start Date" id="startDate" />
                     </div>
                   </div>
                 </div>
@@ -96,39 +96,45 @@
               <div class="col-xs-6 col-md-4">
                 <div class="form-group">
                   <label for="age">Village</label>
-                  <input type="text" name="name" class="form-control"/>
+                  <input type="text" name="address.village" class="form-control" />
                 </div>
               </div>
               <div class="col-xs-6 col-md-4">
                 <div class="form-group">
                   <label for="age">G.P</label>
-                  <input type="text" name="name" class="form-control"/>
+                  <input type="text" name="address.gp" class="form-control" />
                 </div>
               </div>
               <div class="col-xs-6 col-md-4">
                 <div class="form-group">
                   <label for="age">Block</label>
-                  <input type="text" name="name" class="form-control"/>
+                  <input type="text" name="address.block" class="form-control"/>
                 </div>
               </div>
             </div>
             <div class="row">
-              <div class="col-xs-6 col-md-4">
+              <div class="col-xs-6 col-md-3">
                 <div class="form-group">
                   <label for="age">District</label>
-                  <input type="text" name="name" class="form-control"/>
+                  <input type="text" name="address.district" class="form-control"/>
                 </div>
               </div>
-              <div class="col-xs-6 col-md-4">
+              <div class="col-xs-6 col-md-3">
                 <div class="form-group">
                   <label for="age">State</label>
-                  <input type="text" name="name" class="form-control"/>
+                  <input type="text" name="address.state" class="form-control"/>
                 </div>
               </div>
-              <div class="col-xs-6 col-md-4">
+              <div class="col-xs-6 col-md-3">
                 <div class="form-group">
                   <label for="age">Phone No.</label>
-                  <input type="text" name="name" class="form-control"/>
+                  <input type="text" name="address.contact" class="form-control"/>
+                </div>
+              </div>
+              <div class="col-xs-6 col-md-3">
+                <div class="form-group">
+                  <label for="age">Pin</label>
+                  <input type="text" name="address.pin" class="form-control"/>
                 </div>
               </div>
             </div>
@@ -139,32 +145,32 @@
                   <ul class="label-option">
                     <li>
                       <label>
-                        <input type="radio" name="category" class="radio" checked="checked"/>
+                        <input type="radio" name="category" class="radio" checked="checked" value="SC"/>
                         <span class="lbl">SC</span> </label>
                     </li>
                     <li>
                       <label>
-                        <input type="radio" name="category" class="radio"/>
+                        <input type="radio" name="category" class="radio" value="ST"/>
                         <span class="lbl">ST</span> </label>
                     </li>
                     <li>
                       <label>
-                        <input type="radio" name="category" class="radio"/>
+                        <input type="radio" name="category" class="radio" value="OBC"/>
                         <span class="lbl">OBC</span> </label>
                     </li>
                     <li>
                       <label>
-                        <input type="radio" name="category" class="radio"/>
+                        <input type="radio" name="category" class="radio" value="General"/>
                         <span class="lbl">General</span> </label>
                     </li>
                     <li>
                       <label>
-                        <input type="radio" name="category" class="radio"/>
+                        <input type="radio" name="category" class="radio" value="Minority"/>
                         <span class="lbl">Minority</span> </label>
                     </li>
                     <li>
                       <label>
-                        <input type="radio" name="category" class="radio"/>
+                        <input type="radio" name="category" class="radio" value="Other"/>
                         <span class="lbl">Other</span> </label>
                     </li>
                   </ul>
@@ -175,9 +181,7 @@
         </fieldset>
         <fieldset>
           <h5 class="sub-header"><span>Details of the Family member</span></h5>
-          <div class="clearfix text-right">
-            <button type="button" class="btn btn-default btn-blue btn-sm"><i class="glyphicon glyphicon-plus"></i> Add</button>
-          </div>
+          <div class="clearfix text-right"><button type="submit" class="btn btn-default btn-blue btn-sm"><i class="glyphicon glyphicon-plus"></i> Add</button></div>
           <div class="row">
             <div class="col-xs-6 col-md-3">
               <div class="form-group">
@@ -195,9 +199,9 @@
               <div class="form-group">
                 <label for="relationship">Relationship</label>
                 <select name="select" class="form-control">
-                  <option>Wife</option>
-                  <option>Son</option>
-                  <option>Daughter</option>
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+                  <option>Option 3</option>
                 </select>
               </div>
             </div>
@@ -214,56 +218,6 @@
                     <label>
                       <input type="radio" name="family-gender" class="radio"/>
                       <span class="lbl">Female</span> </label>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <!-- Wife -->
-          <div class="row">
-            <div class="col-xs-6 col-md-12">
-              <div class="form-group">
-                <ul class="label-option no-margin">
-                  <li class="pull-left control-label">
-                    <label>
-                      <input type="checkbox" name="family-gender" class="checkbox" checked="checked"/>
-                      <span class="lbl">Pregnant</span> </label>
-                  </li>
-                  <li>
-                    <label class="control-label col-sm-6">Experted delivery date</label>
-                    <div class="col-sm-6 no-padding">
-                      <input type="text" name="name" class="form-control" placeholder="Start Date" id="deliveryDate"/>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <!-- Son -->
-          <div class="row">
-            <div class="col-xs-6 col-md-12">
-              <div class="form-group">
-                <ul class="label-option no-margin">
-                  <li class="pull-left control-label">
-                    <label>
-                      <input type="checkbox" name="family-gender" class="checkbox" checked="checked"/>
-                      <span class="lbl">Integrated with the education / AWC</span> </label>
-                  </li>
-                  <li class="col-sm-4 no-padding-right">
-                    <label class="control-label col-sm-3">School</label>
-                    <div class="col-sm-8 no-padding">
-                      <select name="select" class="form-control">
-                          <option>School 1</option>
-                          <option>School 2</option>
-                          <option>School 3</option>
-                        </select>
-                    </div>
-                  </li>
-                  <li class="col-sm-4 no-padding">
-                    <label class="control-label col-sm-3">Standard</label>
-                    <div class="col-sm-8 no-padding">
-                      <input type="text" name="name" class="form-control"/>
-                    </div>
                   </li>
                 </ul>
               </div>
@@ -286,14 +240,6 @@
 <script>
 jQuery(document).ready(function(){
 	$('#startDate').datepicker({
-		keyboardNavigation: false,
-		forceParse: false,
-		autoclose: true,
-		format: "mm/dd/yyyy",
-		startDate: 'd'
-	});
-	
-	$('#deliveryDate').datepicker({
 		keyboardNavigation: false,
 		forceParse: false,
 		autoclose: true,
