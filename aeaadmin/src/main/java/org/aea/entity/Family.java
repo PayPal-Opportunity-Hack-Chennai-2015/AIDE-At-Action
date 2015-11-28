@@ -24,7 +24,7 @@ public class Family implements Serializable {
 	@Column(name="family_id", length=45)
 	private String familyId;
 
-	private Object notes;
+	private String notes;
 
 	@Column(name="prinary_ngo")
 	private int prinaryNgo;
@@ -79,11 +79,11 @@ public class Family implements Serializable {
 		this.familyId = familyId;
 	}
 
-	public Object getNotes() {
+	public String getNotes() {
 		return this.notes;
 	}
 
-	public void setNotes(Object notes) {
+	public void setNotes(String notes) {
 		this.notes = notes;
 	}
 

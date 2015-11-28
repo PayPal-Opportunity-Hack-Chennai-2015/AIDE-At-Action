@@ -33,7 +33,7 @@ public class Assessment implements Serializable {
 
 	private int ngo;
 
-	private Object notes;
+	private String notes;
 
 	@Column(name="oldage_pesion")
 	private int oldagePesion;
@@ -100,11 +100,11 @@ public class Assessment implements Serializable {
 		this.ngo = ngo;
 	}
 
-	public Object getNotes() {
+	public String getNotes() {
 		return this.notes;
 	}
 
-	public void setNotes(Object notes) {
+	public void setNotes(String notes) {
 		this.notes = notes;
 	}
 
