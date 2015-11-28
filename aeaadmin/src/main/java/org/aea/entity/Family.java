@@ -11,172 +11,182 @@ import java.util.Set;
  * 
  */
 @Entity
-@Table(name="family")
-@NamedQuery(name="Family.findAll", query="SELECT f FROM Family f")
+@Table(name = "family")
+@NamedQuery(name = "Family.findAll", query = "SELECT f FROM Family f")
 public class Family implements Serializable {
-	private static final long serialVersionUID = 1L;
+  private static final long serialVersionUID = 1L;
 
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(unique=true, nullable=false)
-	private int id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  @Column(unique = true, nullable = false)
+  private int id;
 
-	@Column(name="family_id", length=45)
-	private String familyId;
+  @Column(name = "family_id", length = 45)
+  private String familyId;
 
-	private String notes;
+  private String notes;
 
-	@Column(name="prinary_ngo")
-	private int prinaryNgo;
+  private String category;
 
-	@Temporal(TemporalType.DATE)
-	private Date registration;
+  @Column(name = "prinary_ngo")
+  private int prinaryNgo;
 
-	//bi-directional many-to-one association to Assessment
-	@OneToMany(mappedBy="familyBean", fetch=FetchType.EAGER)
-	private Set<Assessment> assessments;
+  @Temporal(TemporalType.DATE)
+  private Date registration;
 
-	//bi-directional many-to-one association to Address
-	@ManyToOne
-	@JoinColumn(name="current_address")
-	private Address address1;
+  // bi-directional many-to-one association to Assessment
+  @OneToMany(mappedBy = "familyBean", fetch = FetchType.EAGER)
+  private Set<Assessment> assessments;
 
-	//bi-directional many-to-one association to Address
-	@ManyToOne
-	@JoinColumn(name="primary_address")
-	private Address address2;
+  // bi-directional many-to-one association to Address
+  @ManyToOne
+  @JoinColumn(name = "current_address")
+  private Address address1;
 
-	//bi-directional many-to-one association to Person
-	@ManyToOne
-	@JoinColumn(name="family_head")
-	private Person person;
+  // bi-directional many-to-one association to Address
+  @ManyToOne
+  @JoinColumn(name = "primary_address")
+  private Address address2;
 
-	//bi-directional many-to-one association to Worksite
-	@ManyToOne
-	@JoinColumn(name="worksite")
-	private Worksite worksiteBean;
+  // bi-directional many-to-one association to Person
+  @ManyToOne
+  @JoinColumn(name = "family_head")
+  private Person person;
 
-	//bi-directional many-to-one association to FamilyTransfer
-	@OneToMany(mappedBy="familyBean", fetch=FetchType.EAGER)
-	private Set<FamilyTransfer> familyTransfers;
+  // bi-directional many-to-one association to Worksite
+  @ManyToOne
+  @JoinColumn(name = "worksite")
+  private Worksite worksiteBean;
 
-	public Family() {
-	}
+  // bi-directional many-to-one association to FamilyTransfer
+  @OneToMany(mappedBy = "familyBean", fetch = FetchType.EAGER)
+  private Set<FamilyTransfer> familyTransfers;
 
-	public int getId() {
-		return this.id;
-	}
+  public Family() {}
 
-	public void setId(int id) {
-		this.id = id;
-	}
+  public int getId() {
+    return this.id;
+  }
 
-	public String getFamilyId() {
-		return this.familyId;
-	}
+  public void setId(int id) {
+    this.id = id;
+  }
 
-	public void setFamilyId(String familyId) {
-		this.familyId = familyId;
-	}
+  public String getFamilyId() {
+    return this.familyId;
+  }
 
-	public String getNotes() {
-		return this.notes;
-	}
+  public void setFamilyId(String familyId) {
+    this.familyId = familyId;
+  }
 
-	public void setNotes(String notes) {
-		this.notes = notes;
-	}
+  public String getNotes() {
+    return this.notes;
+  }
 
-	public int getPrinaryNgo() {
-		return this.prinaryNgo;
-	}
+  public void setNotes(String notes) {
+    this.notes = notes;
+  }
 
-	public void setPrinaryNgo(int prinaryNgo) {
-		this.prinaryNgo = prinaryNgo;
-	}
+  public int getPrinaryNgo() {
+    return this.prinaryNgo;
+  }
 
-	public Date getRegistration() {
-		return this.registration;
-	}
+  public void setPrinaryNgo(int prinaryNgo) {
+    this.prinaryNgo = prinaryNgo;
+  }
 
-	public void setRegistration(Date registration) {
-		this.registration = registration;
-	}
+  public Date getRegistration() {
+    return this.registration;
+  }
 
-	public Set<Assessment> getAssessments() {
-		return this.assessments;
-	}
+  public void setRegistration(Date registration) {
+    this.registration = registration;
+  }
 
-	public void setAssessments(Set<Assessment> assessments) {
-		this.assessments = assessments;
-	}
+  public Set<Assessment> getAssessments() {
+    return this.assessments;
+  }
 
-	public Assessment addAssessment(Assessment assessment) {
-		getAssessments().add(assessment);
-		assessment.setFamilyBean(this);
+  public void setAssessments(Set<Assessment> assessments) {
+    this.assessments = assessments;
+  }
 
-		return assessment;
-	}
+  public Assessment addAssessment(Assessment assessment) {
+    getAssessments().add(assessment);
+    assessment.setFamilyBean(this);
 
-	public Assessment removeAssessment(Assessment assessment) {
-		getAssessments().remove(assessment);
-		assessment.setFamilyBean(null);
+    return assessment;
+  }
 
-		return assessment;
-	}
+  public Assessment removeAssessment(Assessment assessment) {
+    getAssessments().remove(assessment);
+    assessment.setFamilyBean(null);
 
-	public Address getAddress1() {
-		return this.address1;
-	}
+    return assessment;
+  }
 
-	public void setAddress1(Address address1) {
-		this.address1 = address1;
-	}
+  public Address getAddress1() {
+    return this.address1;
+  }
 
-	public Address getAddress2() {
-		return this.address2;
-	}
+  public void setAddress1(Address address1) {
+    this.address1 = address1;
+  }
 
-	public void setAddress2(Address address2) {
-		this.address2 = address2;
-	}
+  public Address getAddress2() {
+    return this.address2;
+  }
 
-	public Person getPerson() {
-		return this.person;
-	}
+  public void setAddress2(Address address2) {
+    this.address2 = address2;
+  }
 
-	public void setPerson(Person person) {
-		this.person = person;
-	}
+  public Person getPerson() {
+    return this.person;
+  }
 
-	public Worksite getWorksiteBean() {
-		return this.worksiteBean;
-	}
+  public void setPerson(Person person) {
+    this.person = person;
+  }
 
-	public void setWorksiteBean(Worksite worksiteBean) {
-		this.worksiteBean = worksiteBean;
-	}
+  public Worksite getWorksiteBean() {
+    return this.worksiteBean;
+  }
 
-	public Set<FamilyTransfer> getFamilyTransfers() {
-		return this.familyTransfers;
-	}
+  public void setWorksiteBean(Worksite worksiteBean) {
+    this.worksiteBean = worksiteBean;
+  }
 
-	public void setFamilyTransfers(Set<FamilyTransfer> familyTransfers) {
-		this.familyTransfers = familyTransfers;
-	}
+  public Set<FamilyTransfer> getFamilyTransfers() {
+    return this.familyTransfers;
+  }
 
-	public FamilyTransfer addFamilyTransfer(FamilyTransfer familyTransfer) {
-		getFamilyTransfers().add(familyTransfer);
-		familyTransfer.setFamilyBean(this);
+  public void setFamilyTransfers(Set<FamilyTransfer> familyTransfers) {
+    this.familyTransfers = familyTransfers;
+  }
 
-		return familyTransfer;
-	}
+  public FamilyTransfer addFamilyTransfer(FamilyTransfer familyTransfer) {
+    getFamilyTransfers().add(familyTransfer);
+    familyTransfer.setFamilyBean(this);
 
-	public FamilyTransfer removeFamilyTransfer(FamilyTransfer familyTransfer) {
-		getFamilyTransfers().remove(familyTransfer);
-		familyTransfer.setFamilyBean(null);
+    return familyTransfer;
+  }
 
-		return familyTransfer;
-	}
+  public FamilyTransfer removeFamilyTransfer(FamilyTransfer familyTransfer) {
+    getFamilyTransfers().remove(familyTransfer);
+    familyTransfer.setFamilyBean(null);
+
+    return familyTransfer;
+  }
+
+  public String getCategory() {
+    return category;
+  }
+
+  public void setCategory(String category) {
+    this.category = category;
+  }
+
 
 }
