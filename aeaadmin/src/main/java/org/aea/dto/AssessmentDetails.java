@@ -11,7 +11,7 @@ import java.util.Set;
  * Created by sathsrinivasan on 11/29/2015.
  */
 public class AssessmentDetails {
-    private Ngo selectedNgo;
+    private int selectedNgo;
     private User familyHead;
     private Address address;
     private String startDate;
@@ -24,11 +24,11 @@ public class AssessmentDetails {
     private String familyId;
     private Date date;
 
-    public Ngo getSelectedNgo() {
+    public int getSelectedNgo() {
         return selectedNgo;
     }
 
-    public void setSelectedNgo(Ngo selectedNgo) {
+    public void setSelectedNgo(int selectedNgo) {
         this.selectedNgo = selectedNgo;
     }
 
