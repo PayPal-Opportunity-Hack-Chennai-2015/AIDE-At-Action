@@ -216,4 +216,13 @@ public class DateUtils {
     }
     return expiryDT.toDate();
   }
+  
+  public String getCurDateAsString(LocalDate loanDate) {
+    String dt = loanDate != null
+        ? Integer.toString(loanDate.getYear()) + String.format("%02d", loanDate.getMonthOfYear())
+            + String.format("%02d", loanDate.getDayOfMonth())
+        : "YYYYMMDD";
+
+    return dt;
+  }
 }

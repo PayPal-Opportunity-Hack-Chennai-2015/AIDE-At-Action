@@ -23,6 +23,8 @@ public class FamilyRegistration {
   private String startDate;
   
   private String category;
+  
+  private String workName;
 
   public User getFamilyHead() {
     return familyHead;
@@ -77,6 +79,13 @@ public class FamilyRegistration {
     return "FamilyRegistration [familyHead=" + familyHead + ", address=" + address + ", family=" + family + ", work="
         + work + ", startDate=" + startDate + ", category=" + category + "]";
   }
-  
+
+  public String getWorkName() {
+    return workName;
+  }
+
+  public void setWorkName(String workName) {
+    this.workName = workName;
+  }
   
 }
