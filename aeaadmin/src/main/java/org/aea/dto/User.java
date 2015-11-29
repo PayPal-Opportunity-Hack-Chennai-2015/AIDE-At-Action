@@ -23,6 +23,8 @@ public class User {
   
   private int enrolledSchol;
   
+  private int schoolId;
+  
   private String standard;
   
   private int isPregrant;
@@ -119,6 +121,14 @@ public class User {
 
   public void setIslactating(int islactating) {
     this.islactating = islactating;
+  }
+
+  public int getSchoolId() {
+    return schoolId;
+  }
+
+  public void setSchoolId(int schoolId) {
+    this.schoolId = schoolId;
   }
 
   @Override

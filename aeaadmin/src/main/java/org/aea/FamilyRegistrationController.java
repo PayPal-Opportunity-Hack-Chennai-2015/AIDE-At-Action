@@ -3,6 +3,8 @@
  */
 package org.aea;
 
+import java.util.List;
+
 import org.aea.dto.FamilyRegistration;
 import org.aea.dto.Worksite;
 import org.aea.entity.School;
@@ -31,7 +33,9 @@ public class FamilyRegistrationController {
     System.out.println("Get");
     FamilyRegistration family = register.getFamilyDetails(familyID);
     model.addAttribute("allschool", register.getAllSchool(null));
-    model.addAttribute("allwork", register.getAllWorksites());
+    List<Worksite> worksites = register.getAllWorksites();
+    System.out.println(family.getFamilyHead().getName());
+    model.addAttribute("allwork", worksites);
     model.addAttribute("registration", family);
     
     return "user-registration";

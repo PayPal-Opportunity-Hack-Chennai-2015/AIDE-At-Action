@@ -62,6 +62,7 @@ public class RegistrationService {
         Worksite work = new Worksite();
         work.setName(wk.getName());
         work.setId(wk.getId());
+        sites.add(work);
       }
     }
     return sites;
@@ -80,6 +81,7 @@ public class RegistrationService {
         School work = new School();
         work.setName(wk.getContact());
         work.setId(wk.getId());
+        sites.add(work);
       }
     }
     return sites;
@@ -154,6 +156,7 @@ public class RegistrationService {
     head.setFname(familyHead.getName());
     head.setAge(familyHead.getAge());
     head.setGender(familyHead.getGender());
+    head.setTitle(familyHead.getRelation());
     if (familyHead.getDob() != null) {
       DateTime dobDate =
           dateUtil.getFormattedPaymentDate(familyHead.getDob(), DateUtils.ddMMyyyy_FSLSH);
@@ -200,7 +203,7 @@ public class RegistrationService {
       if (persons != null && !persons.isEmpty()) {
         for (Person person : persons) {
           User user = buildUser(person);
-          if (user.getRelation() != null) {
+          if (user.getRelation() == null) {
             reg.setFamilyHead(user);
           } else {
             reg.getFamily().add(user);
