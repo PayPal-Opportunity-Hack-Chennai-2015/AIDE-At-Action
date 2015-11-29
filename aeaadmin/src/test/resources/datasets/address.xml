@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <WORKSITE id="1" contact="9884098840" owner="P1" name="Samal Bricks" type="BRICK_KLIN" address="1"/>
+    <WORKSITE id="2" contact="9884098840" owner="O2" name="N2" type="BRICK_KLIN" address="1"/>
+    <WORKSITE id="3" contact="9884098840" owner="O3" name="N3" type="CONSTRUCTION" address="3"/>
+    <WORKSITE id="4" contact="9884098840" owner="O4" name="N4" type="STONE_CRUSHER" address="5"/>
+    <WORKSITE id="5" contact="9884098840" owner="O5" name="N5" type="BRICK_KLIN" address="8"/>
+    <WORKSITE id="6" contact="9884098840" owner="O6" name="N6" type="STONE_CRUSHER" address="11"/>
+    <WORKSITE id="7" contact="9884098840" owner="O7" name="N7" type="CONSTRUCTION" address="12"/>
+    <WORKSITE id="8" contact="9884098840" owner="O8" name="N8" type="BRICK_KLIN" address="14"/>
+    <WORKSITE id="9" contact="9884098840" owner="O9" name="N9" type="CONSTRUCTION" address="17"/>
+    <WORKSITE id="10" contact="9884098840" owner="O10" name="N10" type="CONSTRUCTION" address="10"/>
+</dataset>
