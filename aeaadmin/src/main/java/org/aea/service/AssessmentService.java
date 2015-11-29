@@ -5,15 +5,16 @@ package org.aea.service;
  */
 
 import org.aea.dto.*;
-import org.aea.entity.Assessment;
-import org.aea.entity.Family;
-import org.aea.entity.Person;
+import org.aea.dto.Address;
+import org.aea.entity.*;
+import org.aea.entity.School;
 import org.aea.repo.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
 
 @Service
@@ -36,6 +37,9 @@ public class AssessmentService {
 
     @Autowired
     private WorksiteRepository workRepo;
+
+    @Autowired
+    private SchoolRepo schoolRepo;
 
     public AssessmentDetails getAssessmentDetails(String familyID) {
         final AssessmentDetails reg = new AssessmentDetails();
@@ -94,60 +98,33 @@ public class AssessmentService {
             }
             for (User user : assessment.getFamily()) {
                 //TODO have to set assessment health
-            }
-
-            assessmentRepository.save(assessmentEntity);
-        }
-        if (familyHead != null) {
-//            personRepo.findOne(familyHead.)
-            Person head = registrationService.buildUserEntity(familyHead);
-            head = personRepo.save(head);
-
-            if (head != null) {
-                org.aea.entity.Address addr = new org.aea.entity.Address();
-                Address address = assessment.getAddress();
-                if (address != null) {
-                    addr.setCity(address.getBlock());
-                    addr.setDistrict(address.getDistrict());
-                    addr.setFline(address.getGp());
-                    addr.setRegion(address.getVillage());
-                    addr.setState(address.getState());
-                    addr.setZip(address.getPin());
-                    addr = addrRepo.save(addr);
+                final NutritionAssessment nutritionAssessment = user.getNutritionAssessment();
+                if (nutritionAssessment != null) {
+                    assessmentEntity.setAssessmentHealths(new HashSet<AssessmentHealth>());
+                    final AssessmentHealth assessmentHealth = new AssessmentHealth();
+                    assessmentHealth.setAnemic(nutritionAssessment.getIsAnemic());
+                    assessmentHealth.setCleanwater(nutritionAssessment.getIsCleanWater());
+                    assessmentHealth.setNutrition(nutritionAssessment.getIsNutrition());
+                    assessmentHealth.setSanitation(nutritionAssessment.getIsSanitation());
+                    assessmentEntity.getAssessmentHealths().add(assessmentHealth);
                 }
-                org.aea.entity.Worksite work = new org.aea.entity.Worksite();
-                int wk = assessment.getWork();
-                work = workRepo.findOne(wk);
-                Family f = new Family();
-                f.setAddress1(addr);
-                f.setAddress2(addr);
-                f.setCategory(assessment.getCategory());
-                f.setFamilyId(registrationService.generateID(head));
-                f.setPerson(head);
-                f.setWorksiteBean(work);
-                f.setRegistration(new Date());
 
-                f = familyRepo.save(f);
-                head.setFamilyID(f.getId());
-                personRepo.save(head);
-                if (!assessment.getFamily().isEmpty()) {
-                    for (User usr : assessment.getFamily()) {
-                        Person person = registrationService.buildUserEntity(usr);
-                        if (person != null) {
-                            if (usr.getRelation().equalsIgnoreCase("WIFE")) {
-                                person.setPregnencay(usr.getIsPregrant());
-                                // if(usr.getExpectedDelivery() != null){
-                                // person.set
-                                // }
-                            } else {
-
-                            }
-                            person.setFamilyID(f.getId());
-                            person = personRepo.save(person);
-                        }
+                final EducationAssessment educationAssessment = user.getEducationAssessment();
+                if (educationAssessment != null) {
+                    assessmentEntity.setAssessmentEducations(new HashSet<AssessmentEducation>());
+                    final AssessmentEducation assessmentEducation = new AssessmentEducation();
+                    assessmentEducation.setBooks(educationAssessment.getIsBooks());
+                    assessmentEducation.setScholarship(educationAssessment.getIsScholarship());
+                    assessmentEducation.setGrade(educationAssessment.getGrade());
+                    final int selectedSchool = educationAssessment.getSelectedSchool();
+                    final School school = schoolRepo.findOne(selectedSchool);
+                    if (school != null) {
+                        assessmentEducation.setSchoolBean(school);
                     }
+                    assessmentEntity.getAssessmentEducations().add(assessmentEducation);
                 }
             }
+            assessmentRepository.save(assessmentEntity);
         }
 
     }

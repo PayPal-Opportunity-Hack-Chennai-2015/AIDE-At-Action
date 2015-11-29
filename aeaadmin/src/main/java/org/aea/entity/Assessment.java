@@ -59,6 +59,10 @@ public class Assessment implements Serializable {
     @OneToMany(mappedBy = "assessmentBean", fetch = FetchType.EAGER)
     private Set<AssessmentHealth> assessmentHealths;
 
+    //bi-directional many-to-one association to AssessmentHealth
+    @OneToMany(mappedBy = "assessmentBean", fetch = FetchType.EAGER)
+    private Set<AssessmentEducation> assessmentEducations;
+
     public Assessment() {
     }
 
@@ -170,6 +174,28 @@ public class Assessment implements Serializable {
         assessmentHealth.setAssessmentBean(null);
 
         return assessmentHealth;
+    }
+
+    public Set<AssessmentEducation> getAssessmentEducations() {
+        return assessmentEducations;
+    }
+
+    public void setAssessmentEducations(Set<AssessmentEducation> assessmentEducations) {
+        this.assessmentEducations = assessmentEducations;
+    }
+
+    public AssessmentEducation addAssessmentEducation(AssessmentEducation assessmentEducation) {
+        getAssessmentEducations().add(assessmentEducation);
+        assessmentEducation.setAssessmentBean(this);
+
+        return assessmentEducation;
+    }
+
+    public AssessmentEducation removeAssessmentHealth(AssessmentEducation assessmentEducation) {
+        getAssessmentHealths().remove(assessmentEducation);
+        assessmentEducation.setAssessmentBean(null);
+
+        return assessmentEducation;
     }
 
     @Override

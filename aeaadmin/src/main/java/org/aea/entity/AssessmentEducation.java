@@ -28,6 +28,11 @@ public class AssessmentEducation implements Serializable {
 
 	private int scholarship;
 
+	//bi-directional many-to-one association to Assessment
+	@ManyToOne
+	@JoinColumn(name="assessment")
+	private Assessment assessmentBean;
+
 	//bi-directional many-to-one association to Person
 	@ManyToOne
 	@JoinColumn(name="person")
@@ -39,6 +44,14 @@ public class AssessmentEducation implements Serializable {
 	private School schoolBean;
 
 	public AssessmentEducation() {
+	}
+
+	public Assessment getAssessmentBean() {
+		return assessmentBean;
+	}
+
+	public void setAssessmentBean(Assessment assessmentBean) {
+		this.assessmentBean = assessmentBean;
 	}
 
 	public int getId() {
