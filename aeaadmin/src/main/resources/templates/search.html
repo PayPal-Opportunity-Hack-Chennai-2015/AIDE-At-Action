@@ -36,43 +36,103 @@
 <div class="wrapper">
   <div class="container inner-wrap">
     <form class="form-inline">
+      <div class="jumbotron"> 
+      <label class="sr-only" for="exampleFamilyName">Family Name</label>
+      <input type="email" class="form-control" id="exampleFamilyName" placeholder="Family Name">
+      <label class="sr-only" for="exampleFamilyID">Family ID</label>
+      <input type="password" class="form-control" id="exampleFamilyID" placeholder="Family ID">
+      <label class="sr-only" for="exampleFamilyLocation">Family Location</label>
+      <input type="password" class="form-control" id="exampleFamilyLocation" placeholder="Family Location">
 
-        <label class="sr-only" for="exampleInputEmail3">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
-        <label class="sr-only" for="exampleInputPassword3">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
-        <label class="sr-only" for="exampleInputPassword3">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
-        
       <button type="submit" class="btn btn-default">Sign in</button>
+    </div> <!-- jumbotron -->
     </form>
 
+  <table id="familySearchTable" class="table table-hover table-bordered table-responsive tablesorter">
+      <thead> 
+        <tr> 
+          <th class="header" tabindex="0" aria-sort="ascending">Name</th> 
+          <th class="header">Family Id</th> 
+          <th class="header">State</th> 
+          <th>&nbsp;</th>
+        </tr> 
+      </thead> 
+    <tbody> 
+      <tr> 
+        <td>c</td> 
+        <td>2</td>
+        <td>KA</td> 
+        <td><a href="#">View details</a></td>
+     </tr>
+      <tr> 
+       <td>a</td> 
+       <td>1</td>
+       <td>TN</td>
+       <td><a href="#">View details</a></td>
+     </tr>      
+   </tbody>
+  </table>
 
-  </div>
-</div>
+  </div>  <!-- end container -->
+</div>  <!-- wrapper -->
 <footer>
   <div class="container"> Copyright 2015 All rights reserved. </div>
 </footer>
 <script src="../static/js/lib/jquery.min.js"></script> 
 <script src="../static/js/lib/bootstrap.min.js"></script> 
-<script src="../static/js/lib/bootstrap-datepicker.min.js"></script> 
+<script src="../static/js/lib/__jquery.tablesorter.js"></script> 
 <script>
-jQuery(document).ready(function(){
-	$('#startDate').datepicker({
-		keyboardNavigation: false,
-		forceParse: false,
-		autoclose: true,
-		format: "dd/mm/yyyy",
-		startDate: 'd'
-	});
-	$('#deliveryDate').datepicker({
-		keyboardNavigation: false,
-		forceParse: false,
-		autoclose: true,
-		format: "dd/mm/yyyy",
-		startDate: 'd'
-	});
-});
+
+   (function($) {
+      /*
+       * Table sorter is overridden for keyboard accessibility
+       * Use right and left arrows to navigate
+      */
+        var constructOrig = $.fn.tablesorter;
+        $.fn.extend({
+          tablesorter: function(options) {
+              var $headers =$('th.header'); 
+              if ( $headers.length>0 ){                                           
+                  $headers[0].setAttribute('tabIndex','0');
+                  $headers[0].setAttribute('aria-sort','ascending')
+
+                  $headers.keydown(function(e) {
+                      var k = e.which || e.keyCode
+                          , $this= $(this)
+                      if (!/(13|32|37|39)/.test(k)) return
+
+                      index = $headers.index(this)
+                      if (k == 37) index--
+                      if (k == 39) index++
+
+                      if(index < 0) index = $headers.length -1
+                      if(index == $headers.length) index = 0
+                      if(k == 37 || k === 39){
+                          this.setAttribute('tabIndex','-1');
+                          $headers[index].setAttribute('tabIndex','0');
+                          $headers[index].focus();
+                      }
+                      // console.log(this, $headers,  index);
+                      if( k === 32 || k === 13) {
+                          $this.click()
+                          setTimeout(function(){
+                              // console.log($this.attr('class'))
+                              if($this.hasClass('headerSortUp'))  $this.attr('aria-sort','descending')
+                              if($this.hasClass('headerSortDown')) $this.attr('aria-sort','ascending')
+                          } , 200)
+                      }                                                       
+                  });     
+              }                               
+                constructOrig.apply(this, arguments);
+            }   
+            })
+    })(jQuery);  
+
+$(document).ready(function() 
+{     
+      $("#familySearchTable").tablesorter({sortList: [[0,0]], headers: { 3:{sorter: false}}});
+    } 
+); 
 </script>
 </body>
 </html>
