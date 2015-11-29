@@ -231,13 +231,13 @@
                 <ul class="label-option no-margin">
                   <li class="pull-left control-label">
                     <label>
-                      <input type="checkbox" name="family-gender" class="checkbox" checked="checked"/>
+                      <input type="checkbox" name="family[0].isPregrant" class="checkbox" checked="checked" value="1"/>
                       <span class="lbl">Pregnant</span> </label>
                   </li>
                   <li>
                     <label class="control-label col-sm-6">Experted delivery date</label>
                     <div class="col-sm-6 no-padding">
-                      <input type="text" name="name" class="form-control" placeholder="Start Date" id="deliveryDate"/>
+                      <input type="text" name="family[0].expectedDelivery" class="form-control" placeholder="Start Date" id="deliveryDate"/>
                     </div>
                   </li>
                 </ul>
@@ -251,23 +251,23 @@
                 <ul class="label-option no-margin">
                   <li class="pull-left control-label">
                     <label>
-                      <input type="checkbox" name="family-gender" class="checkbox" checked="checked"/>
+                      <input type="checkbox" name="family[0].enrolledSchol" class="checkbox" checked="checked" value="1"/>
                       <span class="lbl">Integrated with the education / AWC</span> </label>
                   </li>
                   <li class="col-sm-4 no-padding-right">
                     <label class="control-label col-sm-3">School</label>
                     <div class="col-sm-8 no-padding">
-                      <select name="select" class="form-control">
-                          <option>School 1</option>
-                          <option>School 2</option>
-                          <option>School 3</option>
+                      <select name="family[0].schoolId" class="form-control">
+                          <option value="1">School 1</option>
+                          <option value="2">School 2</option>
+                          <option value="3">School 3</option>
                         </select>
                     </div>
                   </li>
                   <li class="col-sm-4 no-padding">
                     <label class="control-label col-sm-3">Standard</label>
                     <div class="col-sm-8 no-padding">
-                      <input type="text" name="name" class="form-control"/>
+                      <input type="text" name="family[0].standard" class="form-control"/>
                     </div>
                   </li>
                 </ul>
@@ -325,13 +325,13 @@
                 <ul class="label-option no-margin">
                   <li class="pull-left control-label">
                     <label>
-                      <input type="checkbox" name="family-gender" class="checkbox" checked="checked"/>
+                      <input type="checkbox" name="family[1].isPregrant" class="checkbox" checked="checked" value="1"/>
                       <span class="lbl">Pregnant</span> </label>
                   </li>
                   <li>
                     <label class="control-label col-sm-6">Experted delivery date</label>
                     <div class="col-sm-6 no-padding">
-                      <input type="text" name="name" class="form-control" placeholder="Start Date" id="deliveryDate"/>
+                      <input type="text" name="family[1].expectedDelivery" class="form-control" placeholder="Start Date" id="deliveryDate"/>
                     </div>
                   </li>
                 </ul>
@@ -345,30 +345,30 @@
                 <ul class="label-option no-margin">
                   <li class="pull-left control-label">
                     <label>
-                      <input type="checkbox" name="family-gender" class="checkbox" checked="checked"/>
+                      <input type="checkbox" name="family[1].enrolledSchol" class="checkbox" checked="checked" value="1"/>
                       <span class="lbl">Integrated with the education / AWC</span> </label>
                   </li>
                   <li class="col-sm-4 no-padding-right">
                     <label class="control-label col-sm-3">School</label>
                     <div class="col-sm-8 no-padding">
-                      <select name="select" class="form-control">
-                          <option>School 1</option>
-                          <option>School 2</option>
-                          <option>School 3</option>
+                      <select name="family[1].schoolId" class="form-control">
+                          <option value="1">School 1</option>
+                          <option value="2">School 2</option>
+                          <option value="3">School 3</option>
                         </select>
                     </div>
                   </li>
                   <li class="col-sm-4 no-padding">
                     <label class="control-label col-sm-3">Standard</label>
                     <div class="col-sm-8 no-padding">
-                      <input type="text" name="name" class="form-control"/>
+                      <input type="text" name="family[1].standard" class="form-control"/>
                     </div>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
-        </div>
+         </div>
 		
 		
 		<div class="clear list-even">
@@ -420,13 +420,13 @@
                 <ul class="label-option no-margin">
                   <li class="pull-left control-label">
                     <label>
-                      <input type="checkbox" name="family-gender" class="checkbox" checked="checked"/>
+                      <input type="checkbox" name="family[2].isPregrant" class="checkbox" checked="checked" value="1"/>
                       <span class="lbl">Pregnant</span> </label>
                   </li>
                   <li>
                     <label class="control-label col-sm-6">Experted delivery date</label>
                     <div class="col-sm-6 no-padding">
-                      <input type="text" name="name" class="form-control" placeholder="Start Date" id="deliveryDate"/>
+                      <input type="text" name="family[2].expectedDelivery" class="form-control" placeholder="Start Date" id="deliveryDate"/>
                     </div>
                   </li>
                 </ul>
@@ -440,23 +440,23 @@
                 <ul class="label-option no-margin">
                   <li class="pull-left control-label">
                     <label>
-                      <input type="checkbox" name="family-gender" class="checkbox" checked="checked"/>
+                      <input type="checkbox" name="family[2].enrolledSchol" class="checkbox" checked="checked" value="1"/>
                       <span class="lbl">Integrated with the education / AWC</span> </label>
                   </li>
                   <li class="col-sm-4 no-padding-right">
                     <label class="control-label col-sm-3">School</label>
                     <div class="col-sm-8 no-padding">
-                      <select name="select" class="form-control">
-                          <option>School 1</option>
-                          <option>School 2</option>
-                          <option>School 3</option>
+                      <select name="family[2].schoolId" class="form-control">
+                          <option value="1">School 1</option>
+                          <option value="2">School 2</option>
+                          <option value="3">School 3</option>
                         </select>
                     </div>
                   </li>
                   <li class="col-sm-4 no-padding">
                     <label class="control-label col-sm-3">Standard</label>
                     <div class="col-sm-8 no-padding">
-                      <input type="text" name="name" class="form-control"/>
+                      <input type="text" name="family[2].standard" class="form-control"/>
                     </div>
                   </li>
                 </ul>
