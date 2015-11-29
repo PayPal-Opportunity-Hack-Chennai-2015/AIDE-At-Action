@@ -2,9 +2,8 @@
 --------------------------------------------- */
 ol, ul{list-style:none; margin:0; padding:0;}
 a,a:hover,a:active,a:focus{cursor:pointer;}
-a, a:active, *:before, *:after{outline:none;}
 a:hover{text-decoration:none;}
-a:focus, a:active{outline:1px solid #c5c7cf;}
+a:focus, a:active{outline: 1px solid blue !important;}
 img{border:0 none; height:auto; max-width:100%; vertical-align:middle;}
 hr{margin-top:0;}
 a{-webkit-transition:0.3s; -moz-transition:0.3s; -o-transition:0.3s; transition:0.3s;}
