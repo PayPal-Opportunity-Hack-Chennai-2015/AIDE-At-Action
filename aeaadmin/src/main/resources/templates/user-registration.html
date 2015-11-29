@@ -181,7 +181,8 @@
         </fieldset>
         <fieldset>
           <h5 class="sub-header"><span>Details of the Family member</span></h5>
-          <div class="clearfix text-right"><button type="submit" class="btn btn-default btn-blue btn-sm"><i class="glyphicon glyphicon-plus"></i> Add</button></div>
+          <div class="clear text-right"><button type="submit" class="btn btn-default btn-blue btn-sm"><i class="glyphicon glyphicon-plus"></i> Add</button></div>
+        <div class="clear list-even">
           <div class="row">
             <div class="col-xs-6 col-md-3">
               <div class="form-group">
@@ -199,9 +200,9 @@
               <div class="form-group">
                 <label for="relationship">Relationship</label>
                 <select name="family[0].relation" class="form-control">
-                  <option>Option 1</option>
-                  <option>Option 2</option>
-                  <option>Option 3</option>
+                  <option>Wife</option>
+                  <option>Son</option>
+                  <option>Daughter</option>
                 </select>
               </div>
             </div>
@@ -223,7 +224,7 @@
               </div>
             </div>
           </div>
-                    <!-- Wife -->
+          <!-- Wife -->
           <div class="row">
             <div class="col-xs-6 col-md-12">
               <div class="form-group">
@@ -243,10 +244,10 @@
               </div>
             </div>
           </div>
-          <!-- Son -->
+          <!-- Son / Daughter -->
           <div class="row">
             <div class="col-xs-6 col-md-12">
-              <div class="form-group">
+              <div class="clearfix form-group">
                 <ul class="label-option no-margin">
                   <li class="pull-left control-label">
                     <label>
@@ -273,8 +274,200 @@
               </div>
             </div>
           </div>
+        </div>
+		
+		<div class="clear list-even">
+          <div class="row">
+            <div class="col-xs-6 col-md-3">
+              <div class="form-group">
+                <label for="fullname">Name</label>
+                <input type="text" name="family[1].name" class="form-control"/>
+              </div>
+            </div>
+            <div class="col-xs-6 col-md-3">
+              <div class="form-group">
+                <label for="family-age">Age</label>
+                <input type="text" name="family[1].age" class="form-control"/>
+              </div>
+            </div>
+            <div class="col-xs-6 col-md-3">
+              <div class="form-group">
+                <label for="relationship">Relationship</label>
+                <select name="family[1].relation" class="form-control">
+                  <option>Wife</option>
+                  <option>Son</option>
+                  <option>Daughter</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-xs-6 col-md-3">
+              <div class="form-group">
+                <label>Gender</label>
+                <ul class="label-option">
+                  <li>
+                    <label>
+                      <input type="radio" name="family[1].gender" class="radio" checked="checked" value="0"/>
+                      <span class="lbl">Male</span> </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input type="radio" name="family[1].gender" class="radio" value="1"/>
+                      <span class="lbl">Female</span> </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Wife -->
+          <div class="row">
+            <div class="col-xs-6 col-md-12">
+              <div class="form-group">
+                <ul class="label-option no-margin">
+                  <li class="pull-left control-label">
+                    <label>
+                      <input type="checkbox" name="family-gender" class="checkbox" checked="checked"/>
+                      <span class="lbl">Pregnant</span> </label>
+                  </li>
+                  <li>
+                    <label class="control-label col-sm-6">Experted delivery date</label>
+                    <div class="col-sm-6 no-padding">
+                      <input type="text" name="name" class="form-control" placeholder="Start Date" id="deliveryDate"/>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Son / Daughter -->
+          <div class="row">
+            <div class="col-xs-6 col-md-12">
+              <div class="clearfix form-group">
+                <ul class="label-option no-margin">
+                  <li class="pull-left control-label">
+                    <label>
+                      <input type="checkbox" name="family-gender" class="checkbox" checked="checked"/>
+                      <span class="lbl">Integrated with the education / AWC</span> </label>
+                  </li>
+                  <li class="col-sm-4 no-padding-right">
+                    <label class="control-label col-sm-3">School</label>
+                    <div class="col-sm-8 no-padding">
+                      <select name="select" class="form-control">
+                          <option>School 1</option>
+                          <option>School 2</option>
+                          <option>School 3</option>
+                        </select>
+                    </div>
+                  </li>
+                  <li class="col-sm-4 no-padding">
+                    <label class="control-label col-sm-3">Standard</label>
+                    <div class="col-sm-8 no-padding">
+                      <input type="text" name="name" class="form-control"/>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+		
+		
+		<div class="clear list-even">
+          <div class="row">
+            <div class="col-xs-6 col-md-3">
+              <div class="form-group">
+                <label for="fullname">Name</label>
+                <input type="text" name="family[2].name" class="form-control"/>
+              </div>
+            </div>
+            <div class="col-xs-6 col-md-3">
+              <div class="form-group">
+                <label for="family-age">Age</label>
+                <input type="text" name="family[2].age" class="form-control"/>
+              </div>
+            </div>
+            <div class="col-xs-6 col-md-3">
+              <div class="form-group">
+                <label for="relationship">Relationship</label>
+                <select name="family[2].relation" class="form-control">
+                  <option>Wife</option>
+                  <option>Son</option>
+                  <option>Daughter</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-xs-6 col-md-3">
+              <div class="form-group">
+                <label>Gender</label>
+                <ul class="label-option">
+                  <li>
+                    <label>
+                      <input type="radio" name="family[2].gender" class="radio" checked="checked" value="0"/>
+                      <span class="lbl">Male</span> </label>
+                  </li>
+                  <li>
+                    <label>
+                      <input type="radio" name="family[2].gender" class="radio" value="1"/>
+                      <span class="lbl">Female</span> </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Wife -->
+          <div class="row">
+            <div class="col-xs-6 col-md-12">
+              <div class="form-group">
+                <ul class="label-option no-margin">
+                  <li class="pull-left control-label">
+                    <label>
+                      <input type="checkbox" name="family-gender" class="checkbox" checked="checked"/>
+                      <span class="lbl">Pregnant</span> </label>
+                  </li>
+                  <li>
+                    <label class="control-label col-sm-6">Experted delivery date</label>
+                    <div class="col-sm-6 no-padding">
+                      <input type="text" name="name" class="form-control" placeholder="Start Date" id="deliveryDate"/>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Son / Daughter -->
+          <div class="row">
+            <div class="col-xs-6 col-md-12">
+              <div class="clearfix form-group">
+                <ul class="label-option no-margin">
+                  <li class="pull-left control-label">
+                    <label>
+                      <input type="checkbox" name="family-gender" class="checkbox" checked="checked"/>
+                      <span class="lbl">Integrated with the education / AWC</span> </label>
+                  </li>
+                  <li class="col-sm-4 no-padding-right">
+                    <label class="control-label col-sm-3">School</label>
+                    <div class="col-sm-8 no-padding">
+                      <select name="select" class="form-control">
+                          <option>School 1</option>
+                          <option>School 2</option>
+                          <option>School 3</option>
+                        </select>
+                    </div>
+                  </li>
+                  <li class="col-sm-4 no-padding">
+                    <label class="control-label col-sm-3">Standard</label>
+                    <div class="col-sm-8 no-padding">
+                      <input type="text" name="name" class="form-control"/>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+		
+		
         </fieldset>
-        <div class="btn-block margin-T15">
+        <div class="btn-block">
           <button type="submit" class="btn btn-lg btn-default">Submit</button>
         </div>
       </form>
@@ -293,14 +486,14 @@ jQuery(document).ready(function(){
 		keyboardNavigation: false,
 		forceParse: false,
 		autoclose: true,
-		format: "mm/dd/yyyy",
+		format: "dd/mm/yyyy",
 		startDate: 'd'
 	});
 	$('#deliveryDate').datepicker({
 		keyboardNavigation: false,
 		forceParse: false,
 		autoclose: true,
-		format: "mm/dd/yyyy",
+		format: "dd/mm/yyyy",
 		startDate: 'd'
 	});
 });
