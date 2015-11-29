@@ -49,8 +49,8 @@ p{font-size:14px; color:#222; line-height:18px;}
 .btn{border-radius:6px; font-weight:bold;}
 .btn i{font-weight:normal;}
 .btn:active,.btn:active:focus,.btn:focus, .btn:active{outline:none; outline-offset:0; box-shadow:none; border-color:rgba(0, 0, 0, 0.1);}
-.btn-default, .btn-default:hover{background-color:#35a724; height:36px; padding:0 15px 2px; font-size:16px; color:#fff; border:2px solid #367e2b; -webkit-transition:0.3s; -moz-transition:0.3s; -o-transition:0.3s; transition:0.3s;}
-.btn-default:hover, .btn-default:focus{background-color:#367e2b !important; color:#fff !important; text-decoration:none;}
+.btn-default, .btn-default:hover{background-color:#257519; height:36px; padding:0 15px 2px; font-size:16px; color:#fff; border:2px solid #367e2b; -webkit-transition:0.3s; -moz-transition:0.3s; -o-transition:0.3s; transition:0.3s;}
+.btn-default:hover, .btn-default:focus{background-color:#15430e !important; color:#fff !important; text-decoration:none;}
 .btn-lg, .btn-lg:hover{height:48px; padding:6px 30px !important;}
 .btn-sm, .btn-sm:hover{height:auto; font-size:15px; padding:4px 15px !important; border-radius:4px !important;}
 .btn-xs, .btn-xs:hover{height:auto; font-size:12px; padding:4px 10px !important; border-radius:3px !important;}

@@ -10,8 +10,10 @@ package org.aea.dto;
 public class School {
 
   private String name;
-  
+
   private Address address;
+
+  private int id;
 
   public String getName() {
     return name;
@@ -28,6 +30,14 @@ public class School {
   public void setAddress(Address address) {
     this.address = address;
   }
-  
-  
+
+  public int getId() {
+    return id;
+  }
+
+  public void setId(int id) {
+    this.id = id;
+  }
+
+
 }

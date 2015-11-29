@@ -277,16 +277,28 @@ footer{background-color:#333; width:100%; height:40px; padding-top:10px; color:#
 .bg-primary {
     background: #1c72be none repeat scroll 0 0 !important;
 }
+.bg-primary:hover {
+    background: #14548b none repeat scroll 0 0 !important;
+}
+
 .bg-success {
     background: #107e71 none repeat scroll 0 0 !important;
+}
+.bg-success:hover {
+    background: #094740 none repeat scroll 0 0 !important;
 }
 .bg-info {
     background: #1f738d none repeat scroll 0 0 !important;
 }
+.bg-info:hover {
+    background: #134b5c none repeat scroll 0 0 !important;
+}
 .bg-warn {
     background: #83710d none repeat scroll 0 0 !important;
 }
-
+.bg-warn:hover {
+    background: #493f07 none repeat scroll 0 0 !important;
+}
 
 .widget-stat-btn {
     position: absolute;

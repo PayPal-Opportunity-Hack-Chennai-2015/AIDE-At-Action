@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<WORKSITE id="1" name="AIDE@ACTION1" type="Brick Klin" />
+	<WORKSITE id="2" name="AIDE@ACTION2" type="Construction" />
+	<WORKSITE id="3" name="AIDE@ACTION3" type="Construction" />
+	
+</dataset>
