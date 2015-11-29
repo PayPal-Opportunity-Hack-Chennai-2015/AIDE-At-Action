@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<FAMILY id="1" notes="family1" />
+	<FAMILY id="2" notes="family2" />
+	<FAMILY id="3" notes="family3" />
+	<FAMILY id="4" notes="family4" />
+</dataset>

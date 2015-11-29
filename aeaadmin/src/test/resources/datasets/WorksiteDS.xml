@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<WORKSITE id="1" contact="WS1" name="AIDE@ACTION1" owner="WS1-1" type="Brick Klin" address="1" />
+	<WORKSITE id="2" contact="WS2" name="AIDE@ACTION2" owner="WS2-2" type="Construction" address="2" />
+	<WORKSITE id="3" contact="WS3" name="AIDE@ACTION3" owner="WS3-3" type="Construction" address="3" />
+	
+ 	<ADDRESS id="1" block="south" city="Bhopal" district="Bhopal-District1" fline="1street" region="North" sline="2line" state="MP" village="Bhopal-Village" zip="1111"/>
+ 	<ADDRESS id="2" block="north" city="Bhopal" district="Bhopal-District2" fline="1street" region="North" sline="2line" state="MP" village="Bhopal-Village" zip="1111"/>
+ 	
+ 	<ADDRESS id="3" block="north" city="Chennai" district="Chennai-District2" fline="1street" region="North" sline="2line" state="TN" village="Chennai-Village" zip="1111"/>
+ 	
+	
+</dataset>
