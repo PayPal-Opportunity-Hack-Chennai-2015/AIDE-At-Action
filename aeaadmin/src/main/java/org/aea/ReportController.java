@@ -23,5 +23,10 @@ public class ReportController {
     model.addAttribute("registration", new Worksite());
     return "user-registration";
   }
+      
+  @RequestMapping("/report")
+  public String getReport(Model model) {
+      return "report";
+  }
   
 }

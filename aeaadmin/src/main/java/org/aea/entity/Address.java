@@ -1,5 +1,7 @@
 package org.aea.entity;
 
+import com.google.common.base.MoreObjects;
+
 import java.io.Serializable;
 import javax.persistence.*;
 import java.util.Set;
@@ -134,7 +136,23 @@ public class Address implements Serializable {
 		this.zip = zip;
 	}
 
-	public Set<Family> getFamilies1() {
+    public String getBlock() {
+        return block;
+    }
+
+    public void setBlock(String block) {
+        this.block = block;
+    }
+
+    public String getVillage() {
+        return village;
+    }
+
+    public void setVillage(String village) {
+        this.village = village;
+    }
+
+    public Set<Family> getFamilies1() {
 		return this.families1;
 	}
 
@@ -244,4 +262,24 @@ public class Address implements Serializable {
 		return familyTransfer;
 	}
 
+    @Override
+    public String toString() {
+        return MoreObjects.toStringHelper(this)
+                .add("id", id)
+                .add("city", city)
+                .add("district", district)
+                .add("fline", fline)
+                .add("region", region)
+                .add("sline", sline)
+                .add("state", state)
+                .add("zip", zip)
+                .add("block", block)
+                .add("village", village)
+                .add("families1", families1)
+                .add("families2", families2)
+                .add("schools", schools)
+                .add("worksites", worksites)
+                .add("familyTransfers", familyTransfers)
+                .toString();
+    }
 }

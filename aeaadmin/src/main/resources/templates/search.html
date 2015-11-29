@@ -7,10 +7,10 @@
 <meta name="description" content="Aide et Action, Aide Action"/>
 <title>Aide et Action</title>
 <link rel="icon" type="image/x-icon" href="images/favicon.ico"/>
-<link href="../static/css/lib/bootstrap.min.css" type="text/css" rel="stylesheet"/>
-<link href="../static/css/lib/bootstrap-datepicker.css" type="text/css" rel="stylesheet"/>
-<link href="../static/css/layout.css" type="text/css" rel="stylesheet"/>
-<link href="../static/css/responsive.css" type="text/css" rel="stylesheet"/>
+<link href="css/lib/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+<link href="css/lib/bootstrap-datepicker.css" type="text/css" rel="stylesheet"/>
+<link href="css/layout.css" type="text/css" rel="stylesheet"/>
+<link href="css/responsive.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
 <header>
@@ -18,10 +18,10 @@
     <div class="container">
       <div class="navbar-header">
         <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-        <a class="navbar-brand" href="index.html"><img src="../static/images/logo.png" alt="Aide et Action"/></a> </div>
+        <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="Aide et Action"/></a> </div>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="javascript:;">Search</a></li>
-        <li class="dropdown navbar-user"> <a data-toggle="dropdown" class="dropdown-toggle" href="javascript:;"> <img alt="" src="../static/images/user.jpg"/> <span class="hidden-xs">Suresh Kumar</span> <b class="caret"></b> </a>
+        <li class="dropdown navbar-user"> <a data-toggle="dropdown" class="dropdown-toggle" href="javascript:;"> <img alt="" src="images/user.jpg"/> <span class="hidden-xs">Suresh Kumar</span> <b class="caret"></b> </a>
           <ul class="dropdown-menu animated fadeInLeft">
             <li class="arrow"></li>
             <li><a href="javascript:;">Edit Profile</a></li>
@@ -36,48 +36,136 @@
 <div class="wrapper">
   <div class="container inner-wrap">
     <form class="form-inline">
-      <div class="form-group">
-        <label class="sr-only" for="exampleInputEmail3">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
-      </div>
-      <div class="form-group">
-        <label class="sr-only" for="exampleInputPassword3">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
-      </div>
-      <div class="form-group">
-        <label class="sr-only" for="exampleInputPassword3">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
-      </div>
-      
+      <div class="jumbotron"> 
+      <label class="sr-only" for="FamilyName">Family Name</label>
+      <input type="email" class="form-control" name="search[1].name" id="FamilyName" placeholder="Family Name">
+      <label class="sr-only" for="FamilyID">Family ID</label>
+      <input type="password" class="form-control" id="FamilyID" placeholder="Family ID" name="search[1].id">
+      <label class="sr-only" for="FamilyLocation">Family Location</label>
+      <input type="password" class="form-control" id="FamilyLocation" placeholder="Family Location" name="search[1].family">
+
       <button type="submit" class="btn btn-default">Sign in</button>
+    </div> <!-- jumbotron -->
     </form>
 
-
-  </div>
-</div>
+  <table id="familySearchTable" class="table table-hover table-bordered table-responsive tablesorter">
+      <thead> 
+        <tr> 
+          <th class="header" tabindex="0" aria-sort="ascending">Name</th> 
+          <th class="header">Family Id</th> 
+          <th class="header">State</th> 
+          <th>&nbsp;</th>
+        </tr> 
+      </thead> 
+    <tbody> 
+      <tr> 
+        <td>c</td> 
+        <td>2</td>
+        <td>KA</td> 
+        <td><a href="#modal" data-toggle="modal" data-target="#myModal">View details</a></td>
+     </tr>
+      <tr> 
+       <td>a</td> 
+       <td>1</td>
+       <td>TN</td>
+       <td><a href="#modal" data-toggle="modal" data-target="#myModal">View details</a></td>
+     </tr>      
+   </tbody>
+  </table>
+<!-- Modal code -->
+<div aria-labelledby="myModalLabel" role="dialog" tabindex="-1" class="modal fade" id="myModal" style="display: none;">
+    <div role="document" class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button aria-label="Close" data-dismiss="modal" class="close" type="button">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 id="myModalLabel" class="modal-title">Family Details</h4>
+            </div>
+            <div class="modal-body">
+                <h4>Text in a modal</h4>
+                <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+                <h4>Popover in a modal</h4>
+                <p>This 
+                    <a data-content="And here's some amazing content. It's very engaging. right?" title="" class="btn btn-default popover-test" role="button" href="#" data-original-title="A Title">button</a> should trigger a popover on click.
+                </p>
+                <h4>Tooltips in a modal</h4>
+                <p>
+                    <a title="" class="tooltip-test" href="#" data-original-title="Tooltip">This link</a> and 
+                    <a title="" class="tooltip-test" href="#" data-original-title="Tooltip">that link</a> should have tooltips on hover.
+                </p>
+                <hr>
+                    <h4>Overflowing text to show scroll behavior</h4>
+                    <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                </div>
+                <div class="modal-footer">
+                    <button data-dismiss="modal" class="btn btn-default" type="button">Close</button>
+                    <button class="btn btn-primary" type="button">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- end modal -->
+  </div>  <!-- end container -->
+</div>  <!-- wrapper -->
 <footer>
   <div class="container"> Copyright 2015 All rights reserved. </div>
 </footer>
-<script src="../static/js/lib/jquery.min.js"></script> 
-<script src="../static/js/lib/bootstrap.min.js"></script> 
-<script src="../static/js/lib/bootstrap-datepicker.min.js"></script> 
+<script src="js/lib/jquery.min.js"></script> 
+<script src="js/lib/bootstrap.min.js"></script> 
+<script src="js/lib/__jquery.tablesorter.js"></script> 
 <script>
-jQuery(document).ready(function(){
-	$('#startDate').datepicker({
-		keyboardNavigation: false,
-		forceParse: false,
-		autoclose: true,
-		format: "dd/mm/yyyy",
-		startDate: 'd'
-	});
-	$('#deliveryDate').datepicker({
-		keyboardNavigation: false,
-		forceParse: false,
-		autoclose: true,
-		format: "dd/mm/yyyy",
-		startDate: 'd'
-	});
-});
+
+   (function($) {
+      /*
+       * Table sorter is overridden for keyboard accessibility
+       * Use right and left arrows to navigate
+      */
+        var constructOrig = $.fn.tablesorter;
+        $.fn.extend({
+          tablesorter: function(options) {
+              var $headers =$('th.header'); 
+              if ( $headers.length>0 ){                                           
+                  $headers[0].setAttribute('tabIndex','0');
+                  $headers[0].setAttribute('aria-sort','ascending')
+
+                  $headers.keydown(function(e) {
+                      var k = e.which || e.keyCode
+                          , $this= $(this)
+                      if (!/(13|32|37|39)/.test(k)) return
+
+                      index = $headers.index(this)
+                      if (k == 37) index--
+                      if (k == 39) index++
+
+                      if(index < 0) index = $headers.length -1
+                      if(index == $headers.length) index = 0
+                      if(k == 37 || k === 39){
+                          this.setAttribute('tabIndex','-1');
+                          $headers[index].setAttribute('tabIndex','0');
+                          $headers[index].focus();
+                      }
+                      // console.log(this, $headers,  index);
+                      if( k === 32 || k === 13) {
+                          $this.click()
+                          setTimeout(function(){
+                              // console.log($this.attr('class'))
+                              if($this.hasClass('headerSortUp'))  $this.attr('aria-sort','descending')
+                              if($this.hasClass('headerSortDown')) $this.attr('aria-sort','ascending')
+                          } , 200)
+                      }                                                       
+                  });     
+              }                               
+                constructOrig.apply(this, arguments);
+            }   
+            })
+    })(jQuery);  
+
+$(document).ready(function() 
+{     
+      $("#familySearchTable").tablesorter({sortList: [[0,0]], headers: { 3:{sorter: false}}});
+    } 
+); 
 </script>
 </body>
 </html>
