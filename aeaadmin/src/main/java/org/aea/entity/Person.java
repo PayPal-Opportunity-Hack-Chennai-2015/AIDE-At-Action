@@ -43,6 +43,8 @@ public class Person implements Serializable {
 
 	private int pregnencay;
 
+	private int familyID;
+	
 	@Column(length=45)
 	private String title;
 
@@ -214,5 +216,13 @@ public class Person implements Serializable {
 
 		return schoolTransfer;
 	}
+
+  public int getFamilyID() {
+    return familyID;
+  }
+
+  public void setFamilyID(int familyID) {
+    this.familyID = familyID;
+  }
 
 }
