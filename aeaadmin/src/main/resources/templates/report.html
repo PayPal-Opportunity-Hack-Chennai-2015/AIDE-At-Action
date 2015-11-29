@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Aide @ Action Reports</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+	<link href="css/lib/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+	<link href="css/lib/bootstrap-datepicker.css" type="text/css" rel="stylesheet"/>
+	<link href="css/layout.css" type="text/css" rel="stylesheet"/>
+	<link href="css/responsive.css" type="text/css" rel="stylesheet"/>
+		
+	 <script type="text/javascript" src="/js/lib/jquery.min.js"></script>
+	 <script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
+	 <script type="text/javascript" src="/js/lib/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="/js/lib/highcharts.js"></script>
+    <script type="text/javascript" src="/js/lib/exporting.js"></script>
+    <script type="text/javascript" src="/js/lib/custom-chart.js"></script>
+
+    <script type="text/javascript">
+    /*
+        $(document).ready(function() {
+            getRemoteDataDrawChart('/linechart1', createNewLineChart('chart1-container'));  
+            getRemoteDataDrawChart('/linechart2', createNewLineChart('chart2-container'));
+            getRemoteDataDrawChart('/linechart3', createNewLineChart('chart3-container'));
+        });
+    */
+    
+    $(function () {
+        $('#chart1-container').highcharts({
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'City Vs Worksites'
+            },
+            xAxis: {
+                categories: ['Bhopal', 'Bhubaneswar', 'Chennai', 'Hyderabad']
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: 'worksites'
+                },
+                stackLabels: {
+                    enabled: true,
+                    style: {
+                        fontWeight: 'bold',
+                        color: 'gray'
+                    }
+                }
+            },
+            legend: {
+                align: 'right',
+                x: -30,
+                verticalAlign: 'top',
+                y: 25,
+                floating: true,
+                backgroundColor: 'white',
+                borderColor: '#CCC',
+                borderWidth: 1,
+                shadow: false
+            },
+            tooltip: {
+                headerFormat: '<b>{point.x}</b><br/>',
+                pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
+            },
+            plotOptions: {
+                column: {
+                    stacking: 'normal',
+                    dataLabels: {
+                        enabled: true,
+                        color: 'white',
+                        style: {
+                            textShadow: '0 0 3px black'
+                        }
+                    }
+                }
+            },
+            series: [{
+                name: 'Brick Kiln',
+                data: [5, 3, 4, 7]
+            }, {
+                name: 'Construction',
+                data: [2, 2, 3, 2]
+            }, {
+                name: 'Stone Crusher',
+                data: [3, 4, 4, 2]
+            }]
+        });
+    });
+    
+    $(function () {
+        $('#chart2-container').highcharts({
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'City Vs Worksites'
+            },
+            xAxis: {
+                categories: ['Bhopal', 'Bhubaneswar', 'Chennai', 'Hyderabad']
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: 'worksites'
+                },
+                stackLabels: {
+                    enabled: true,
+                    style: {
+                        fontWeight: 'bold',
+                        color: 'gray'
+                    }
+                }
+            },
+            legend: {
+                align: 'right',
+                x: -30,
+                verticalAlign: 'top',
+                y: 25,
+                floating: true,
+                backgroundColor: 'white',
+                borderColor: '#CCC',
+                borderWidth: 1,
+                shadow: false
+            },
+            tooltip: {
+                headerFormat: '<b>{point.x}</b><br/>',
+                pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
+            },
+            plotOptions: {
+                column: {
+                    stacking: 'normal',
+                    dataLabels: {
+                        enabled: true,
+                        color: 'white',
+                        style: {
+                            textShadow: '0 0 3px black'
+                        }
+                    }
+                }
+            },
+            series: [{
+                name: 'District',
+                data: [5, 3, 4, 7]
+            }, {
+                name: 'Blocks',
+                data: [2, 2, 3, 2]
+            }, {
+                name: 'Villages',
+                data: [3, 4, 4, 2]
+            }]
+        });
+    });
+    
+    $(function () {
+        $('#chart3-container').highcharts({
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie'
+            },
+            title: {
+                text: 'Migrant Categories'
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.y}</b>'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        format: '<b>{point.name}</b>: {point.y}',
+                        style: {
+                            color: 'black'
+                        }
+                    }
+                }
+            },
+            series: [{
+                name: 'Categories',
+                colorByPoint: true,
+                data: [{
+                    name: 'Schedule Caste',
+                    y: 56
+                }, {
+                    name: 'Schedule Tribe',
+                    y: 24,
+                    sliced: true,
+                    selected: true
+                }, {
+                    name: 'OBC',
+                    y: 10
+                }, {
+                    name: 'General',
+                    y: 4
+                }]
+            }]
+        });
+    });
+    
+    </script>
+</head>
+<body>
+<div id="wrap">
+<!-- NAVBAR -->
+<!-- Docs master nav -->
+<div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+       
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <div class="nav-collapse collapse" id="navbar-main">
+            <ul class="nav navbar-nav pull-left">
+            </ul>
+        </div>
+    </div>
+</div><br/><br/><br/><br/>
+
+<!-- CONTAINER -->
+<div class="container">
+<div class="row">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">City vs Worksite Categories</h3>
+                    </div>
+                    <div id="chart1-container" style="min-width: 300px; max-width: 500px;  height: 300px; margin: 0 auto"></div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">City Vs Region</h3>
+                    </div>
+                    <div id="chart2-container" style="min-width: 300px; max-width: 500px;  height: 300px; margin: 0 auto"></div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-warning">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Migrant Categories</h3>
+                    </div>
+                    <div id="chart3-container" style="min-width: 300px; max-width: 500px;  height: 300px; margin: 0 auto"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div><!--/CONTAINER -->
+<div id="push"></div>
+</div><!--/WRAP -->
+
+
+</body>
+</html>
