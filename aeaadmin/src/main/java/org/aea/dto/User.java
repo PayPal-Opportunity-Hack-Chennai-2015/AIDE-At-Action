@@ -35,6 +35,8 @@ public class User {
     private int handicaped;
 
     private int islactating;
+    
+    private int schoolId;
 
     private NutritionAssessment nutritionAssessment;
 
@@ -172,4 +174,13 @@ public class User {
         this.userId = userId;
     }
 
+    public int getSchoolId() {
+      return schoolId;
+    }
+
+    public void setSchoolId(int schoolId) {
+      this.schoolId = schoolId;
+    }
+
+    
 }

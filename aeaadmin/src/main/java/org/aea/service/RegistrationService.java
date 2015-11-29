@@ -223,4 +223,25 @@ public class RegistrationService {
         }
         return ngos;
     }
+
+    public List<FamilyRegistration> getFamilies(String familyID) {
+      List<FamilyRegistration> families = new ArrayList<FamilyRegistration>();
+      List<Family> fams = familyRepo.findAll();
+      if(fams != null && ! fams.isEmpty()){
+        for(Family fa : fams){
+          FamilyRegistration re = new FamilyRegistration();
+          re.setFamilyId(fa.getFamilyId());
+          if(fa.getAddress1() != null){
+            re.setVillage(fa.getAddress1().getRegion());
+            re.setCity(fa.getAddress1().getCity());
+          }
+          if(fa.getWorksiteBean()!=null){
+            re.setWorkName(fa.getWorksiteBean().getName());
+          }
+          
+          families.add(re);
+        }
+      }
+      return families;
+    }
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -291,9 +291,9 @@
               <div class="form-group">
                 <label for="relationship">Relationship</label>
                 <select name="family[1].relation" class="form-control">
-                  <option>Wife</option>
-                  <option>Son</option>
-                  <option>Daughter</option>
+                  <option value="Wife">Wife</option>
+                  <option value="Son">Son</option>
+                  <option value="Daughter">Daughter</option>
                 </select>
               </div>
             </div>
@@ -384,9 +384,9 @@
               <div class="form-group">
                 <label for="relationship">Relationship</label>
                 <select class="form-control" th:field="*{registration.family[2].relation}">
-                  <option>Wife</option>
-                  <option>Son</option>
-                  <option>Daughter</option>
+                  <option value="Wife">Wife</option>
+                  <option value="Son">Son</option>
+                  <option value="Daughter">Daughter</option>
                 </select>
               </div>
             </div>

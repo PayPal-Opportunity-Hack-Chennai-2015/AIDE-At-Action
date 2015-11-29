@@ -72,4 +72,24 @@ public class FamilyRegistrationController {
     register.addwork(registration);
     return "dashboard";
   }
+  
+//  @RequestMapping(value = "/search", method = RequestMethod.GET)
+//  @ResponseBody
+//  public DatatablesResponse<FamilyRegistration> search(@RequestParam(value = "id", required = false) String familyID,
+//      Model model) {
+////    model.addAttribute("families", register.getFamilies(familyID));
+//    List<FamilyRegistration> families = register.getFamilies(familyID);
+//    DataSet<FamilyRegistration> dataset = new DataSet<FamilyRegistration>(families, new Long(families.size()), 15l);
+//    return DatatablesResponse.build(dataset);
+//  }
+  
+  @RequestMapping(value = "/search", method = RequestMethod.GET)
+//  @ResponseBody
+  public String search(@RequestParam(value = "id", required = false) String familyID,
+      Model model) {
+    model.addAttribute("families", register.getFamilies(familyID));
+//    List<FamilyRegistration> families = register.getFamilies(familyID);
+//    DataSet<FamilyRegistration> dataset = new DataSet<FamilyRegistration>(families, new Long(families.size()), 15l);
+    return "search";
+  }
 }
