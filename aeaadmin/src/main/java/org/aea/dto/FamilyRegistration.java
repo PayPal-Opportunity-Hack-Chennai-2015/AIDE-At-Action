@@ -26,6 +26,14 @@ public class FamilyRegistration {
   
   private String workName;
 
+  private String familyId;
+  
+  private String head;
+  
+  private String village;
+  
+  private String city;
+  
   public User getFamilyHead() {
     return familyHead;
   }
@@ -87,5 +95,38 @@ public class FamilyRegistration {
   public void setWorkName(String workName) {
     this.workName = workName;
   }
+
+  public String getFamilyId() {
+    return familyId;
+  }
+
+  public void setFamilyId(String familyId) {
+    this.familyId = familyId;
+  }
+
+  public String getHead() {
+    return head;
+  }
+
+  public void setHead(String head) {
+    this.head = head;
+  }
+
+  public String getVillage() {
+    return village;
+  }
+
+  public void setVillage(String village) {
+    this.village = village;
+  }
+
+  public String getCity() {
+    return city;
+  }
+
+  public void setCity(String city) {
+    this.city = city;
+  }
+  
   
 }
