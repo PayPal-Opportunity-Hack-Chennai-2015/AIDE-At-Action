@@ -7,6 +7,7 @@ package org.aea.service;
 import org.aea.dto.*;
 import org.aea.dto.Address;
 import org.aea.entity.*;
+import org.aea.entity.Ngo;
 import org.aea.entity.School;
 import org.aea.repo.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,6 +41,9 @@ public class AssessmentService {
 
     @Autowired
     private SchoolRepo schoolRepo;
+
+    @Autowired
+    private NgoRepository ngoRepository;
 
     public AssessmentDetails getAssessmentDetails(String familyID) {
         final AssessmentDetails reg = new AssessmentDetails();
@@ -91,7 +95,10 @@ public class AssessmentService {
                 assessmentEntity.setMarriageScheme(familyEntitlement.getIsMarriageScheme());
                 assessmentEntity.setMeternalBenifits(familyEntitlement.getIsMarriageBenefits());
 //                assessmentEntity.setNotes(familyEntitlement.get);
-                assessmentEntity.setNgo(family.getPrinaryNgo());
+                final Ngo selectedNgo = ngoRepository.findOne(assessment.getSelectedNgo());
+                if (selectedNgo != null) {
+                    assessmentEntity.setNgo(selectedNgo.getId());
+                }
                 assessmentEntity.setOldagePesion(familyEntitlement.getIsOldAgePension());
                 assessmentEntity.setWidowPension(familyEntitlement.getIsWidowPension());
                 assessmentEntity.setRation(familyEntitlement.getRation());
