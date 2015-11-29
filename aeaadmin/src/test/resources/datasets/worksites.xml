@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+<ADDRESS id="1" city="Bhubaneswar" district="Cuttack" fline="CUTTACK KENDRAPAR ROAD"
+         region="Orissa" sline="CUTTACK KENDRAPAR ROAD" state="Orissa" zip="754005" block="Cuttack" village="Dara"/>
+<ADDRESS id="2" city="Bhubaneswar" district="Angul" fline="1"
+         region="Orissa" sline="Item notes" state="Orissa" zip="759132" block="Angul" village="Balanga"/>
+<ADDRESS id="3" city="Bhubaneswar" district="1" fline="1"
+         region="Orissa" sline="Item notes" state="Orissa" zip="759100" block="Angul" village="Biru"/>
+<ADDRESS id="4" city="Bhopal" district="Jhabua" fline="LAXMISAGAR CHHAK"
+         region="MP" sline="Item notes" state="Madhya Pradesh" zip="457893" block="Jhabua" village="1"/>
+<ADDRESS id="5" city="Bhopal" district="Sheopur" fline="1"
+         region="MP" sline="LAXMISAGAR CHHAK" state="Madhya Pradesh" zip="476339" block="Sheopur" village="Awada"/>
+<ADDRESS id="6" city="Bhopal" district="Raisen" fline="1"
+         region="MP" sline="Item notes" state="Madhya Pradesh" zip="464668" block="Raisen" village="Akola"/>
+<ADDRESS id="7" city="Chennai" district="Chennai" fline="CUTTACK KENDRAPAR ROAD"
+         region="Chennai Circle" sline="CUTTACK KENDRAPAR ROAD" state="TamilNadu" zip="600017" block="Central Chennai" village="TNagar"/>
+<ADDRESS id="8" city="Chennai" district="Chennai" fline="1"
+         region="Chennai Circle" sline="Item notes" state="TamilNadu" zip="600053" block="West Chennai" village="Ambattur"/>
+<ADDRESS id="9" city="Chennai" district="Chennai" fline="1"
+         region="Chennai Circle" sline="Item notes" state="TamilNadu" zip="600017" block="Central Chennai" village="TNagar"/>
+<ADDRESS id="10" city="Chennai" district="Chennai" fline="LAXMISAGAR CHHAK"
+         region="Chennai Circle" sline="Item notes" state="TamilNadu" zip="600053" block="West Chennai" village="Ambattur"/>
+<ADDRESS id="11" city="Chennai" district="Chennai" fline="1"
+         region="Chennai Circle" sline="LAXMISAGAR CHHAK" state="TamilNadu" zip="600071" block="West Chennai" village="Avadi"/>
+<ADDRESS id="12" city="Hyderabad" district="Hyderabad" fline="1"
+         region="North Telelngana" sline="Item notes" state="Telengana" zip="500013" block="Central Hyderabad" village="Amberpet"/>
+<ADDRESS id="13" city="Hyderabad" district="Hyderabad" fline="CUTTACK KENDRAPAR ROAD"
+         region="North Telelngana" sline="CUTTACK KENDRAPAR ROAD" state="Telengana" zip="501301" block="Central hyderabad" village="Cherial"/>
+<ADDRESS id="14" city="Hyderabad" district="Hyderabad" fline="1"
+         region="North Telelngana" sline="Item notes" state="Telengana" zip="500008" block="South Hyderabad" village="Golconda"/>
+<ADDRESS id="15" city="Rajapalayam" district="Sivakasi" fline="1"
+         region="South TamilNadu" sline="Item notes" state="TamilNadu" zip="659100" block="South" village="Sundarajapuram"/>
+<ADDRESS id="16" city="Villupuram" district="Villupuram" fline="LAXMISAGAR CHHAK"
+         region="South TamilNadu" sline="Item notes" state="TamilNadu" zip="657893" block="Coastal Tamilnadu" village="Vaniyam Palayam"/>
+<ADDRESS id="17" city="Villupuram" district="Villupuram" fline="1"
+         region="South TamilNadu" sline="LAXMISAGAR CHHAK" state="TamilNadu" zip="676339" block="Coastal Tamilnadu" village="Koliyanur"/>
+<ADDRESS id="18" city="Ramanathapuram" district="Ramanathapuram" fline="1"
+         region="South TamilNadu" sline="Item notes" state="TamilNadu" zip="664668" block="Coastal Tamilnadu" village="Dhanushkodi"/>
+</dataset>

@@ -1,5 +1,7 @@
 package org.aea.entity;
 
+import com.google.common.base.MoreObjects;
+
 import java.io.Serializable;
 import javax.persistence.*;
 import java.util.Set;
@@ -202,5 +204,20 @@ public class Worksite implements Serializable {
     this.owner = owner;
   }
 
-
+  @Override
+  public String toString() {
+    return MoreObjects.toStringHelper(this)
+            .add("id", id)
+            .add("contact", contact)
+            .add("owner", owner)
+            .add("name", name)
+            .add("type", type)
+            .add("worksitecol", worksitecol)
+            .add("assessments", assessments)
+            .add("families", families)
+            .add("addressBean", addressBean)
+            .add("familyTransfers1", familyTransfers1)
+            .add("familyTransfers2", familyTransfers2)
+            .toString();
+  }
 }

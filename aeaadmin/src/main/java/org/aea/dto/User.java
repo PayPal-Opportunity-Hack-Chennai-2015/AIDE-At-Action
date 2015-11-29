@@ -1,143 +1,175 @@
 /**
- * 
+ *
  */
 package org.aea.dto;
+
+import com.google.common.base.MoreObjects;
 
 import java.util.Date;
 
 /**
  * @author Prasad
- *
  */
 public class User {
 
-  private String name;
-  
-  private int age;
-  
-  private String dob;
-  
-  private int gender;
-  
-  private String relation;
-  
-  private int enrolledSchol;
-  
-  private int schoolId;
-  
-  private String standard;
-  
-  private int isPregrant;
-  
-  private String expectedDelivery;
-  
-  private int handicaped;
-  
-  private int islactating;
+    private int userId;
 
-  public String getName() {
-    return name;
-  }
+    private String name;
 
-  public void setName(String name) {
-    this.name = name;
-  }
+    private int age;
 
-  public int getAge() {
-    return age;
-  }
+    private String dob;
 
-  public void setAge(int age) {
-    this.age = age;
-  }
+    private int gender;
 
-  public int getGender() {
-    return gender;
-  }
+    private String relation;
 
-  public void setGender(int gender) {
-    this.gender = gender;
-  }
+    private int enrolledSchol;
 
-  public String getRelation() {
-    return relation;
-  }
+    private String standard;
 
-  public void setRelation(String relation) {
-    this.relation = relation;
-  }
+    private int isPregrant;
 
-  public int getEnrolledSchol() {
-    return enrolledSchol;
-  }
+    private String expectedDelivery;
 
-  public void setEnrolledSchol(int enrolledSchol) {
-    this.enrolledSchol = enrolledSchol;
-  }
+    private int handicaped;
 
-  public String getStandard() {
-    return standard;
-  }
+    private int islactating;
 
-  public void setStandard(String standard) {
-    this.standard = standard;
-  }
+    private NutritionAssessment nutritionAssessment;
 
-  public int getIsPregrant() {
-    return isPregrant;
-  }
+    private EducationAssessment educationAssessment;
 
-  public void setIsPregrant(int isPregrant) {
-    this.isPregrant = isPregrant;
-  }
+    public String getName() {
+        return name;
+    }
 
-  public String getDob() {
-    return dob;
-  }
+    public void setName(String name) {
+        this.name = name;
+    }
 
-  public void setDob(String dob) {
-    this.dob = dob;
-  }
+    public int getAge() {
+        return age;
+    }
 
-  public String getExpectedDelivery() {
-    return expectedDelivery;
-  }
+    public void setAge(int age) {
+        this.age = age;
+    }
 
-  public void setExpectedDelivery(String expectedDelivery) {
-    this.expectedDelivery = expectedDelivery;
-  }
+    public int getGender() {
+        return gender;
+    }
 
-  public int getHandicaped() {
-    return handicaped;
-  }
+    public void setGender(int gender) {
+        this.gender = gender;
+    }
 
-  public void setHandicaped(int handicaped) {
-    this.handicaped = handicaped;
-  }
+    public String getRelation() {
+        return relation;
+    }
 
-  public int getIslactating() {
-    return islactating;
-  }
+    public void setRelation(String relation) {
+        this.relation = relation;
+    }
 
-  public void setIslactating(int islactating) {
-    this.islactating = islactating;
-  }
+    public int getEnrolledSchol() {
+        return enrolledSchol;
+    }
 
-  public int getSchoolId() {
-    return schoolId;
-  }
+    public void setEnrolledSchol(int enrolledSchol) {
+        this.enrolledSchol = enrolledSchol;
+    }
 
-  public void setSchoolId(int schoolId) {
-    this.schoolId = schoolId;
-  }
+    public String getStandard() {
+        return standard;
+    }
 
-  @Override
-  public String toString() {
-    return "User [name=" + name + ", age=" + age + ", dob=" + dob + ", gender=" + gender + ", relation=" + relation
-        + ", enrolledSchol=" + enrolledSchol + ", standard=" + standard + ", isPregrant=" + isPregrant
-        + ", expectedDelivery=" + expectedDelivery + ", handicaped=" + handicaped + ", islactating=" + islactating
-        + "]";
-  }
-  
-  
+    public void setStandard(String standard) {
+        this.standard = standard;
+    }
+
+    public int getIsPregrant() {
+        return isPregrant;
+    }
+
+    public void setIsPregrant(int isPregrant) {
+        this.isPregrant = isPregrant;
+    }
+
+    public String getDob() {
+        return dob;
+    }
+
+    public void setDob(String dob) {
+        this.dob = dob;
+    }
+
+    public String getExpectedDelivery() {
+        return expectedDelivery;
+    }
+
+    public void setExpectedDelivery(String expectedDelivery) {
+        this.expectedDelivery = expectedDelivery;
+    }
+
+    public int getHandicaped() {
+        return handicaped;
+    }
+
+    public void setHandicaped(int handicaped) {
+        this.handicaped = handicaped;
+    }
+
+    public int getIslactating() {
+        return islactating;
+    }
+
+    public void setIslactating(int islactating) {
+        this.islactating = islactating;
+    }
+
+    public NutritionAssessment getNutritionAssessment() {
+        return nutritionAssessment;
+    }
+
+    public void setNutritionAssessment(NutritionAssessment nutritionAssessment) {
+        this.nutritionAssessment = nutritionAssessment;
+    }
+
+    public EducationAssessment getEducationAssessment() {
+        return educationAssessment;
+    }
+
+    public void setEducationAssessment(EducationAssessment educationAssessment) {
+        this.educationAssessment = educationAssessment;
+    }
+
+    public int getUserId() {
+        return userId;
+    }
+
+    @Override
+    public String toString() {
+        return MoreObjects.toStringHelper(this)
+                .add("userId", userId)
+                .add("name", name)
+                .add("age", age)
+                .add("dob", dob)
+                .add("gender", gender)
+                .add("relation", relation)
+                .add("enrolledSchol", enrolledSchol)
+                .add("standard", standard)
+                .add("isPregrant", isPregrant)
+                .add("expectedDelivery", expectedDelivery)
+                .add("handicaped", handicaped)
+                .add("islactating", islactating)
+                .add("nutritionAssessment", nutritionAssessment)
+                .add("educationAssessment", educationAssessment)
+                .toString();
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
+
 }
